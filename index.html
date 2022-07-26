@@ -1,21 +1,1760 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>saif malik</title>
-    <link rel="stylesheet" href="src/style/index.css">
-</head>
-<body>
-    <header>
-        <div class="index-header-container"><h1>Saif Malik</h1></div>
-    </header>
-    <main>
-        <h1><b>This website is under maintenance ...</b></h1>
-    </main>
-    <footer>
-        
-    </footer>
-</body>
+<html lang="zxx">
+  <head>
+
+  <link rel="icon" href="https://raw.githubusercontent.com/saif-mal1k/saif-mal1k/main/folder/image.png" type="image/icon type">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- color of address bar in mobile browser -->
+    <meta name="theme-color" content="#2B2B35" />
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="img/thumbnail.ico" type="image/x-icon" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css" />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css" />
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="http://fonts.cdnfonts.com/css/brittany-signature" rel="stylesheet">
+
+
+    <title>saifmalik.engineer</title>
+
+    <!-- waving hand and all round borders -->
+    <style>
+
+      *{
+        border-radius: 10px !important;
+      }
+
+      .wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+    </style>
+    <!-- waving hand & all round borders / -->
+
+    <!-- styling the slider -->
+
+      <style>
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px black;
+}
+
+
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+  </style>
+  <!-- slider style / -->
+
+
+<!-- chat app style start -->
+    <style>
+.theme-light {
+  --color-primary: rgb(240, 238, 230);
+  --color-secondary: #095963;
+  --progress-bar-background: #86b0b5;
+  --shade-infobar: #e8f0ee;
+  --text-color1: #000000;
+  --text-color2: #323232;
+  --header-background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(240, 238, 230, 0.96) 70%, rgba(240, 238, 230, 0.99) 100%, #1e1e28 100%);
+  --header-banner-gradient: linear-gradient(90deg, rgba(230, 239, 238, 0.9) 15%, rgba(158, 183, 183, 0.594) 50%, rgba(43, 53, 52, 0.587) 100%);
+  --picture-frame-gradient: linear-gradient(159deg, rgba(216, 215, 215, 0.98) 0%, rgba(103, 103, 103, 0.98) 100%);
+  --card-gradient: linear-gradient(159deg, #aeaeae 0%, #aeaeae 100%);
+    --art-form-field-background: linear-gradient(159deg, #a8a7a7 0%, #535353 100%);
+}
+.theme-dark {
+  --color-primary: black; /* #000000 */
+  --color-secondary: #00ffea;
+  --progress-bar-background: #095963;
+  --shade-infobar: #0D1117;
+  --text-color1: #fafafc;
+  --text-color2: #8c8c8e;
+  --header-background-gradient: linear-gradient(180deg, rgba(30, 30, 40, 0.93) 0%, rgba(0, 0, 0, 0.96) 70%, rgba(0, 0, 0, 0.99) 100%, #1e1e28 100%);
+  --header-banner-gradient: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%);
+  --picture-frame-gradient: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  --card-gradient: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  --art-form-field-background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+}
+
+
+       .username{
+        display: inline !important;
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      .login-with-google-btn {
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        padding: 12px 16px 12px 42px;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.25);
+
+        color: #757575;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTcuNiA5LjJsLS4xLTEuOEg5djMuNGg0LjhDMTMuNiAxMiAxMyAxMyAxMiAxMy42djIuMmgzYTguOCA4LjggMCAwIDAgMi42LTYuNnoiIGZpbGw9IiM0Mjg1RjQiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik05IDE4YzIuNCAwIDQuNS0uOCA2LTIuMmwtMy0yLjJhNS40IDUuNCAwIDAgMS04LTIuOUgxVjEzYTkgOSAwIDAgMCA4IDV6IiBmaWxsPSIjMzRBODUzIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNNCAxMC43YTUuNCA1LjQgMCAwIDEgMC0zLjRWNUgxYTkgOSAwIDAgMCAwIDhsMy0yLjN6IiBmaWxsPSIjRkJCQzA1IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48cGF0aCBkPSJNOSAzLjZjMS4zIDAgMi41LjQgMy40IDEuM0wxNSAyLjNBOSA5IDAgMCAwIDEgNWwzIDIuNGE1LjQgNS40IDAgMCAxIDUtMy43eiIgZmlsbD0iI0VBNDMzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZD0iTTAgMGgxOHYxOEgweiIvPjwvZz48L3N2Zz4=);
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: 12px 11px;
+      }
+
+      .login-with-google-btn:hover {
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .login-with-google-btn:active {
+        background-color: #eeeeee;
+      }
+
+      .login-with-google-btn:focus {
+        outline: none;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25),
+          0 0 0 3px #c8dafc;
+      }
+
+
+
+      #wrapper,
+      #loginform {
+        background: var(--card-gradient);
+      }
+
+      #loginform {
+        padding-top: 18px;
+      }
+
+      #loginform p {
+        margin: 5px;
+      }
+
+      #chatbox {
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 6px;
+        padding: 10px;
+        background: var(--art-form-field-background);
+        height: 335px;
+        width: auto;
+        overflow: auto;
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 1px 4px 0 rgb(15 15 20 / 10%);
+    box-shadow: inset 0 1px 4px 0 rgb(15 15 20 / 10%);
+      }
+
+      .usermsg {
+        height: 45px;
+        width: calc(100% - 60px);
+        padding: 10px;
+        border: none;
+        background: var(--art-form-field-background);
+        resize: none;
+        color: var(--text-color1);
+        border-radius: 5px;
+      }
+
+      .send-msg-btn {
+        display: inline-block;
+        float: right;
+        border: none;
+        cursor: pointer;
+        width: 50px;
+        padding: 0 10px !important;
+        }
+
+      .error {
+        color: #ff0000;
+      }
+
+      #menu {
+        padding: 12.5px 25px 12.5px 25px;
+      }
+
+      .welcome {
+        float: left;
+        font-size: 18px;
+        color: teal;
+      }
+
+      .login-google-btn {
+        float: center;
+        background-color: rgb(35, 140, 182);
+        color: white;
+        padding: 10px 14px;
+        border: none;
+        cursor: pointer;
+        width: 18%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+        border-radius: 5px;
+        font-size: 10px;
+        margin-right: 2px;
+      }
+      .login-google-btn:hover {
+        background-color: rgb(110, 196, 230);
+        color: white;
+      }
+
+      .msgln {
+        margin: 0 0 2px 0;
+      }
+
+    </style>
+    <!--chat app style /-->
+
+        <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRGRF5mZ4OfIrWfg35UYjsX44MQymlkkc",
+        authDomain: "saif-mal1k.firebaseapp.com",
+        databaseURL: "https://saif-mal1k-default-rtdb.firebaseio.com",
+        projectId: "saif-mal1k",
+        storageBucket: "saif-mal1k.appspot.com",
+        messagingSenderId: "954561908384",
+        appId: "1:954561908384:web:7fc2ca012a6f64b4a983c5",
+        measurementId: "G-MCD7H1MW89",
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>  
+<!-- chat app script -->
+
+  </head>
+
+  <body>
+    <!-- app -->
+    <div class="art-app" style="border-radius: 0px !important;">
+      <!-- mobile top bar -->
+      <div class="art-mobile-top-bar"></div>
+
+      <!-- app wrapper -->
+      <div class="art-app-wrapper">
+        <!-- app container end -->
+        <div class="art-app-container">
+
+          <!-- main content body-->
+          <div class="art-content" style="padding-right: 0px; margin-right: 0px;">
+            <!-- curtain -->
+            <div class="art-curtain"></div>
+
+            <!-- top background -->
+            <div class="art-top-bg" style="background-image: url(img/background2.jpg);">
+              <!-- overlay -->
+              <div class="art-top-bg-overlay"></div>
+              <!-- overlay end -->
+            </div>
+            <!-- top background end -->
+
+            <!-- swup container -->
+            <div class="transition-fade" id="swup" >
+              <!-- scroll frame -->
+              <div id="scrollbar" class="art-scroll-frame">
+                <!-- container -->
+                <div class="container-fluid">
+                  <!-- row -->
+                  <div class="row p-30-0 p-lg-30-0 p-md-15-0">
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- banner -->
+                      <div
+                        class="art-a art-banner"
+                      >
+
+
+                        <!-- banner overlay -->
+                        <div class="art-banner-overlay">
+                          <!-- main title -->
+                          <div class="art-banner-title">
+
+                            <div style="float:right;">
+                                <label id="switch" class="switch">
+                                        <input type="checkbox" onchange="toggleTheme()" id="slider">
+                                        <span class="slider round"></span>
+                                </label>
+                            </div>
+
+                              <script>
+                                 // function to set a given theme/color-scheme
+                                  function setTheme(themeName) {
+                                      localStorage.setItem('theme', themeName);
+                                      document.documentElement.className = themeName;
+                                  }
+                                
+                                  // function to toggle between dark theme and light theme
+                                  function toggleTheme() {
+                                      if (localStorage.getItem('theme') === 'theme-dark') {
+                                          setTheme('theme-light');
+                                      } else {
+                                          setTheme('theme-dark');
+                                      }
+                                  }
+                                
+                                  // initial theme setup
+                                  (function () {
+                                      if (localStorage.getItem('theme') === 'theme-dark') {
+                                          setTheme('theme-dark');
+                                          document.getElementById('slider').checked = false;
+                                      } else {
+                                          setTheme('theme-light');
+                                        document.getElementById('slider').checked = true;
+                                      }
+                                  })();
+                                
+                              </script>
+
+                            <!-- title -->
+                            <h1 class="mb-15">
+                              Hello! <span class="wave" style="font-size: 50px;">👋</span> 
+                              <br/>
+                              <span style="font-size: 20px;"> My name is Saif Malik</span> 
+                            </h1>
+
+                            <!-- suptitle -->
+                            <div class="art-lg-text art-code mb-25">
+                              I'm  
+                              <span
+                                style="border-width: 2px; border-radius: 0px !important;"
+                                class="txt-rotate"
+                                data-period="2000"
+                                data-rotate='[ "a Developer", "an Engineer", "a Tech Enthusiast" ]'
+                              ></span>
+                            </div>
+
+
+
+                            
+                          </div>
+                          <!-- main title end -->
+
+                        </div>
+                        <!-- banner overlay end -->
+                      </div>
+                      <!-- banner end -->
+                    </div>
+                    <!-- col end -->
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+
+                <!-- container -->
+                <div class="container-fluid">
+                  <!-- row -->
+                  <div class="row p-30-0">
+                    <!-- col -->
+                    <div class="col-md-3 col-6" style="display:none;">
+                      <!-- change "col-md-3 col-6" for below three after setting this div to inline -->
+                      <!-- couner frame -->
+                      <div class="art-counter-frame">
+                        <!-- counter -->
+                        <div class="art-counter-box">
+                          <!-- counter number -->
+                          <span class="art-counter">2</span
+                          ><span class="art-counter-plus">+</span>
+                        </div>
+                        <!-- counter end -->
+                        <!-- title -->
+                        <a href="#" class="anchor-nav-underline">
+                        <h6>Years Experience</h6>
+                        </a>
+                      </div>
+                      <!-- couner frame end -->
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col -->
+                    <div class="col-md-4 col-6">
+                      <!-- couner frame -->
+                      <div class="art-counter-frame">
+                        <!-- counter -->
+                        <div class="art-counter-box">
+                          <!-- counter number -->
+                          <span class="art-counter">3</span>
+                          <span class="art-counter-plus">+</span>
+                        </div>
+                        <!-- counter end -->
+                        <!-- title -->
+                        <a 
+                         data-fancybox="diplome" 
+                         data-no-swup 
+                         href="img/works/thumbnail/salesforce.png" 
+                         class="anchor-nav-underline">
+                        <h6>Completed Projects</h6>
+                        </a>
+                      </div>
+                      <!-- couner frame end -->
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col -->
+                    <div class="col-md-4 col-6">
+                      <!-- couner frame -->
+                      <div class="art-counter-frame">
+                        <!-- counter -->
+                        <div class="art-counter-box">
+                          <!-- counter number -->
+                          <span class="art-counter">5</span>
+                                                    <span class="art-counter-plus">+</span>
+
+                        </div>
+                        <!-- counter end -->
+                        <!-- title -->
+                        <a
+                          data-fancybox="gallery"
+                          data-no-swup
+                          href="img\Certificates\git.pdf"
+                          class="anchor-nav-underline">
+                        <h6> Certifications </h6>
+                        </a>
+                        <div style="display:none">
+                           <a data-fancybox="gallery" href="img\Certificates\python.pdf">
+                            <img class="rounded" src="img\Certificates\python.pdf" />
+                          </a>
+                          <a data-fancybox="gallery" href="img\Certificates\cpp.pdf">
+                            <img class="rounded" src="img\Certificates\cpp.pdf" />
+                          </a>
+                            <a data-fancybox="gallery" href="img\Certificates\agile.pdf">
+                            <img class="rounded" src="img\Certificates\agile.pdf" />
+                          </a>
+                            </div>
+                      </div>
+                      <!-- couner frame end -->
+                    </div>
+                    <!-- col end -->
+
+                    
+                    
+                    <!-- col -->
+                    <div class="col-md-4 col-6">
+                      <!-- couner frame -->
+                      <div class="art-counter-frame">
+                        <!-- counter -->
+                        <div class="art-counter-box">
+                          <!-- counter number -->
+                          <span class="art-counter">12</span
+                          ><span class="art-counter-plus">+</span>
+                        </div>
+                        <!-- counter end -->
+                        <!-- title -->
+                        <h6>Challanges & Hackathons</h6>
+                      </div>
+                      <!-- couner frame end -->
+                    </div>
+                    <!-- col end -->
+
+
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+
+                <br/>
+
+                <!-- container -->
+                <div class="container-fluid">
+                  <!-- row -->
+                  <div class="row">
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- section title -->
+                      <div class="art-section-title">
+                        <!-- title frame -->
+                        <div class="art-title-frame">
+                          <!-- title -->
+                          <h3> What I do 🤵 💻 ?</h3>
+                        </div>
+                        <!-- title frame end -->
+                      </div>
+                      <!-- section title end -->
+                    </div>
+                    <!-- col end -->
+
+                    <a href="https://github.com/saif-mal1k/web-development/">
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-6">
+                      <!-- service -->
+                      <div class="art-a card">
+                        <!-- service content -->
+                        <div class="art-service-ib-content">
+                          <!-- title -->
+                          <h5 class="mb-15">Web Development</h5>
+                          <!-- text -->
+                          <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden; ">
+                            "Art that reflect Creativity on Digital Canvas"
+                          </div>
+                          <!-- button -->
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://github.com/saif-mal1k/web-development/"
+                              class="art-link art-color-link art-w-chevron"
+                              >see my notes</a
+                            >
+                          </div>
+                        </div>
+                        <!-- service card end -->
+                      </div>
+                      <!-- service end -->
+                    </div>
+                    <!-- col end -->
+                    </a>
+
+                    <a href="https://github.com/saif-mal1k/Salesforce-Notes">
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-6">
+                      <!-- service -->
+                      <div class="art-a card">
+                        <!-- service content -->
+                        <div class="art-service-ib-content">
+                          <!-- title -->
+                          <h5 class="mb-15">Salesforce Development</h5>
+                          <!-- text -->
+                          <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden;">
+                            "a tool that is capable of connecting the dots between business and intrested customers"
+                          </div>
+                          <!-- button -->
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://github.com/saif-mal1k/Salesforce-Notes"
+                              class="art-link art-color-link art-w-chevron"
+                              >see my notes</a
+                            >
+                          </div>
+                        </div>
+                        <!-- service content end -->
+                      </div>
+                      <!-- service end -->
+                    </div>
+                    <!-- col end -->
+                    </a>
+
+                    <a href="https://github.com/saif-mal1k/programming">  
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-6">
+                      <!-- service -->
+                      <div class="art-a card">
+                        <!-- service content -->
+                        <div class="art-service-ib-content">
+                          <!-- title -->
+                          <h5 class="mb-15">programming</h5>
+                          <!-- text -->
+                          <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden;">
+                            "Mind Game involving puzzles solved through code"
+                          </div>
+                          <!-- button -->
+                          <div class="art-buttons-frame">
+                            <a
+                              href="https://github.com/saif-mal1k/programming"
+                              class="art-link art-color-link art-w-chevron"
+                              >see my notes</a
+                            >
+                          </div>
+                        </div>
+                        <!-- service content end -->
+                      </div>
+                      <!-- service end -->
+                    </div>
+                    <!-- col end -->
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+                </a>  
+
+
+                <br/>
+
+                <!-- my portfolio container -->
+                <div class="container-fluid">
+                  <!-- row -->
+                  <div class="row p-30-0">
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- section title -->
+                      <div class="art-section-title">
+                        <!-- title frame -->
+                        <div class="art-title-frame" >
+                          <!-- title -->
+                          <h3>Projects I've done 🎨 :</h3>
+                        </div>
+                        <!-- title frame end -->
+                      </div>
+                      <!-- section title end -->
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- filter -->
+                      <div class="art-filter mb-30">
+                        <!-- filter link -->
+                        <a href="#" data-filter="*" class="art-link art-current"
+                          >All Categories</a
+                        >
+
+                        <!-- filter link -->
+                        <a href="#" data-filter=".DesktopApplication" class="art-link"
+                          >Desktop Application</a
+                        >
+                        <!-- filter link -->
+                        <a href="#" data-filter=".SalesforceApp" class="art-link"
+                          >Salesforce app</a
+                        >
+                        <!-- filter link -->
+                        <a href="#" data-filter=".WebDevelopment" class="art-link"
+                          >Web Development</a
+                        >
+                        <!-- filter link -->
+                        <a href="#" data-filter=".WebAutomation" class="art-link"
+                          >Web automation</a
+                        >
+
+                      </div>
+                      <!-- filter end -->
+                    </div>
+                    <!-- col end -->
+
+                    <div class="art-grid art-grid-2-col art-gallery">
+                      <!-- grid item -->
+                      <div class="art-grid-item DesktopApplication">
+                        <!-- grid item frame -->
+                        <a
+                          data-fancybox="diplome"
+                          data-no-swup
+                          href="img/works/thumbnail/virtual-assistant.png"
+                          class="art-a art-portfolio-item-frame art-horizontal"
+                        >
+                          <!-- img -->
+                          <img src="img/works/thumbnail/virtual-assistant.png" alt="item" />
+                          <!-- zoom icon -->
+                          <!--<span class="art-item-hover"
+                            ><i class="fas fa-expand"></i
+                          ></span>-->
+                        </a>
+                        <!-- grid item frame end -->
+                        <!-- description -->
+                        <div class="art-item-description" style="padding: 0px;">
+
+                          <a href="https://www.github.com/virtual-assistant" title="click to view on Github">
+                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=saif-mal1k&amp;repo=virtual-assistant&amp;bg_color=2d2d38&amp;hide_border=true&amp;title_color=05FFFF&amp;text_color=8C8C8E&amp;icon_color=05ffff" width="100%">
+                          </a>
+                        </div>
+                        <!-- description end -->
+                      </div>
+                      <!-- grid item end -->
+
+
+                      
+                      <!-- grid item -->
+                      <div class="art-grid-item SalesforceApp">
+                        <!-- grid item frame -->
+                        <a
+                          data-fancybox="diplome"
+                          data-no-swup
+                          href="img/works/thumbnail/salesforce.png"
+                          class="art-a art-portfolio-item-frame art-horizontal"
+                        >
+                          <!-- img -->
+                          <img src="img/works/thumbnail/salesforce.png" alt="item" />
+                          <!-- zoom icon -->
+                          <!--<span class="art-item-hover"
+                            ><i class="fas fa-expand"></i
+                          ></span>-->
+                        </a>
+                        <!-- grid item frame end -->
+                        <!-- description -->
+                        <div class="art-item-description">
+                          <!-- title -->
+                          <h5 class="mb-15">Mileage Tracker Application</h5>
+                          <div class="mb-15">
+                            created an application in salesforce that keep track of vehicles, their mileage and the users.
+                          </div>
+                          <!-- button -->
+                          <a
+                            href="#"
+                            class="art-link art-color-link art-w-chevron"
+                            >Read more</a
+                          >
+                        </div>
+                        <!-- description end -->
+                      </div>
+                      <!-- grid item end -->
+
+
+                      <!-- grid item -->
+                      <div class="art-grid-item WebDevelopment">
+                        <!-- grid item frame -->
+                        <a
+                          data-fancybox="diplome"
+                          data-no-swup
+                          href="img/works/thumbnail/portfolio.png"
+                          class="art-a art-portfolio-item-frame art-horizontal"
+                        >
+                          <!-- img -->
+                          <img src="img/works/thumbnail/portfolio.png" alt="item" />
+                          <!-- zoom icon -->
+                          <!--<span class="art-item-hover"
+                            ><i class="fas fa-expand"></i
+                          ></span>-->
+                        </a>
+                        <!-- grid item frame end -->
+                        <!-- description -->
+                        <div class="art-item-description">
+                          <!-- title -->
+                          <h5 class="mb-15">portfolio website</h5>
+                          <div class="mb-15">
+                            used firebase, HTML , CSS and JS to create this website.
+                          </div>
+                          <!-- button -->
+                          <a
+                            href="https://saifmalik.engineer"
+                            class="art-link art-color-link art-w-chevron"
+                            >Read more</a
+                          >
+                        </div>
+                        <!-- description end -->
+                      </div>
+                      <!-- grid item end -->
+
+                                            <!-- grid item -->
+                      <div class="art-grid-item WebAutomation">
+                        <!-- grid item frame -->
+                        <a
+                          data-fancybox="diplome"
+                          data-no-swup
+                          href="img/works/thumbnail/automation.png"
+                          class="art-a art-portfolio-item-frame art-horizontal"
+                        >
+                          <!-- img -->
+                          <img src="img/works/thumbnail/automation.png" alt="item" />
+                          <!-- zoom icon -->
+                          <!--<span class="art-item-hover"
+                            ><i class="fas fa-expand"></i
+                          ></span>-->
+                        </a>
+                        <!-- grid item frame end -->
+                        <!-- description -->
+                        <div class="art-item-description">
+                          <!-- title -->
+                          <h5 class="mb-15">Web Automation</h5>
+                          <div class="mb-15">
+                            created a python script that automatically do repeated tasks.
+                          </div>
+                          <!-- button -->
+                          <a
+                            href="#"
+                            class="art-link art-color-link art-w-chevron"
+                            >Read more</a
+                          >
+                        </div>
+                        <!-- description end -->
+                      </div>
+                      <!-- grid item end -->
+
+                    </div>
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+
+                <!--<br/>
+
+                <br/>--> <!-- uncomment break when set below container display to block -->
+
+                <!-- Recommendation container -->
+                <div class="container-fluid" style="display: none;">
+                  <!-- row -->
+                  <div class="row">
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- section title -->
+                      <div class="art-section-title">
+                        <!-- title frame -->
+                        <div class="art-title-frame">
+                          <!-- title -->
+                          <h3>Recommendations 👍</h3>
+                        </div>
+                        <!-- title frame end -->
+                      </div>
+                      <!-- section title end -->
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- slider container -->
+                      <div
+                        class="swiper-container art-testimonial-slider"
+                        style="overflow: visible"
+                      >
+                        <!-- slider wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- slide -->
+                          <div class="swiper-slide" >
+                            <!-- testimonial -->
+                            <div class="art-a art-testimonial" >
+                              <!-- testimonial body -->
+                              <div class="testimonial-body">
+                                <a  href="#">
+                                <!-- photo -->
+                                <img
+                                  data-no-swup
+                                  class="art-testimonial-face"
+                                  src="https://trailblazer.me/profilephoto/7298W000001qOSW/M"
+                                  alt="face"
+                                  style="border-radius: 50% !important;"
+                                />
+                                </a>
+                                <!-- name -->
+                                <h5>Sumit Parcha</h5>
+                                <div class="art-el-suptitle mb-15">
+                                  Designation
+                                </div>
+                                <!-- text -->
+                                <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden;">
+                                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis iure possimus sit excepturi deserunt odit, harum fugiat temporibus fugit voluptas iste, doloribus saepe nihil quaerat, exercitationem officia eius molestias modi?
+                                </div>
+                              </div>
+                              <!-- testimonial body end -->
+                              <!-- testimonial footer -->
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <!-- star rate -->
+                                  <ul class="art-star-rate">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                  </ul>
+                                  <!-- star rate end -->
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                              <!-- testimonial footer end -->
+                            </div>
+                            <!-- testimonial end -->
+                          </div>
+                          <!-- slide end -->
+
+                          <!-- slide -->
+                          <div class="swiper-slide">
+                            <!-- testimonial -->
+                            <div class="art-a art-testimonial">
+                              <!-- testimonial body -->
+                              <div class="testimonial-body">
+                                <a href="#">
+                                <!-- photo -->
+                                <img
+                                  class="art-testimonial-face"
+                                  src="https://trailblazer.me/profilephoto/7298W000001rY6D/M"
+                                  alt="face"
+                                  style="border-radius: 50% !important;"
+                                />
+                                </a>
+                                <!-- name -->
+                                <h5>Nishant Singh</h5>
+                                <div class="art-el-suptitle mb-15">
+                                  Designation
+                                </div>
+                                <!-- text -->
+                                <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden;">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis deleniti fuga minus ex aperiam corrupti quidem atque quis? A sapiente quos doloribus! Itaque earum repellat inventore quia, praesentium molestias.
+                                </div>
+                              </div>
+                              <!-- testimonial body end -->
+                              <!-- testimonial footer -->
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <!-- star rate -->
+                                  <ul class="art-star-rate">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li id="no-fill"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#737373" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#545454" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                  </ul>
+                                  <!-- star rate end -->
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                              <!-- testimonial footer end -->
+                            </div>
+                            <!-- testimonial end -->
+                          </div>
+                          <!-- slide end -->
+
+                          <!-- slide -->
+                          <div class="swiper-slide">
+                            <!-- testimonial -->
+                            <div class="art-a art-testimonial">
+                              <!-- testimonial body -->
+                              <div class="testimonial-body">
+                                <!-- photo -->
+                                <a href="#">
+                                <img
+                                  class="art-testimonial-face"
+                                  src="https://trailblazer.me/profilephoto/7298W000001mBuZ/M"
+                                  alt="face"
+                                  style="border-radius: 50% !important;"
+                                />
+                                </a>
+                                <!-- name -->
+                                <h5>Rahul Chaudhary</h5>
+                                <div class="art-el-suptitle mb-15">
+                                  Designation
+                                </div>
+                                <!-- text -->
+                                <div class="mb-15" style="min-height:80px !important; max-height: 80px !important; Overflow:hidden;">
+                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis deleniti fuga minus ex aperiam corrupti quidem atque quis? A sapiente quos doloribus! Itaque earum repellat inventore quia, praesentium molestias.
+                                </div>
+                              </div>
+                              <!-- testimonial body end -->
+                              <!-- testimonial footer -->
+                              <div class="art-testimonial-footer">
+                                <div class="art-left-side">
+                                  <!-- star rate -->
+                                  <ul class="art-star-rate">
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
+                                  </ul>
+                                  <!-- star rate end -->
+                                </div>
+                                <div class="art-right-side"></div>
+                              </div>
+                              <!-- testimonial footer end -->
+                            </div>
+                            <!-- testimonial end -->
+                          </div>
+                          <!-- slide end -->
+                        
+                        </div>
+                        <!-- slider wrapper end -->
+                      </div>
+                      <!-- slider container end -->
+                    </div>
+                    <!-- col end -->
+
+                    <!-- col -->
+                    <div class="col-lg-12">
+                      <!-- slider navigation -->
+                      <div class="art-slider-navigation">
+                        <!-- left side -->
+                        <div class="art-sn-left">
+                          <!-- slider pagination -->
+                          <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- left side end -->
+
+                        <!-- right side -->
+                        <div class="art-sn-right">
+                          <!-- slider navigation -->
+                          <div class="art-slider-nav-frame">
+                            <!-- prev button -->
+                            <div class="art-slider-nav art-testi-swiper-prev" >
+                              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="20px" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 22 1 L 65.078125 1 L 65.078125 73.714844 L 22 73.714844 Z M 22 1 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 60.625 2.222656 C 59.972656 1.953125 59.300781 1.78125 58.597656 1.714844 C 57.898438 1.644531 57.207031 1.679688 56.515625 1.816406 C 55.824219 1.953125 55.171875 2.1875 54.550781 2.523438 C 53.929688 2.855469 53.371094 3.269531 52.875 3.769531 L 24.445312 32.300781 C 24.113281 32.628906 23.820312 32.992188 23.5625 33.378906 C 23.300781 33.769531 23.082031 34.179688 22.902344 34.613281 C 22.726562 35.046875 22.589844 35.492188 22.5 35.949219 C 22.410156 36.410156 22.363281 36.875 22.363281 37.339844 C 22.363281 37.808594 22.410156 38.273438 22.5 38.734375 C 22.589844 39.191406 22.726562 39.636719 22.902344 40.070312 C 23.082031 40.503906 23.300781 40.914062 23.5625 41.304688 C 23.820312 41.691406 24.113281 42.054688 24.445312 42.382812 L 52.875 70.914062 C 53.371094 71.414062 53.929688 71.828125 54.550781 72.160156 C 55.171875 72.492188 55.824219 72.726562 56.515625 72.863281 C 57.203125 73.003906 57.898438 73.035156 58.597656 72.96875 C 59.296875 72.898438 59.972656 72.730469 60.621094 72.460938 C 61.269531 72.1875 61.867188 71.832031 62.410156 71.382812 C 62.953125 70.933594 63.421875 70.417969 63.8125 69.832031 C 64.203125 69.246094 64.5 68.617188 64.703125 67.941406 C 64.90625 67.265625 65.007812 66.574219 65.007812 65.871094 L 65.007812 8.8125 C 65.007812 8.105469 64.90625 7.417969 64.703125 6.742188 C 64.5 6.066406 64.203125 5.4375 63.8125 4.851562 C 63.421875 4.261719 62.957031 3.746094 62.410156 3.296875 C 61.867188 2.851562 61.273438 2.492188 60.625 2.222656 Z M 60.625 2.222656 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+                            </div>
+                            <!-- next button -->
+                            <div class="art-slider-nav art-testi-swiper-next">
+                              <svg style="display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="20px" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 7.628906 1.105469 L 51 1.105469 L 51 73.855469 L 7.628906 73.855469 Z M 7.628906 1.105469 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 12.085938 72.601562 C 12.734375 72.871094 13.410156 73.039062 14.109375 73.109375 C 14.808594 73.175781 15.503906 73.144531 16.191406 73.003906 C 16.882812 72.867188 17.539062 72.632812 18.15625 72.300781 C 18.777344 71.96875 19.335938 71.550781 19.832031 71.050781 L 48.265625 42.523438 C 48.59375 42.191406 48.890625 41.832031 49.148438 41.441406 C 49.40625 41.050781 49.625 40.640625 49.804688 40.207031 C 49.984375 39.777344 50.117188 39.332031 50.210938 38.871094 C 50.300781 38.410156 50.34375 37.949219 50.34375 37.480469 C 50.34375 37.011719 50.300781 36.546875 50.210938 36.089844 C 50.117188 35.628906 49.984375 35.183594 49.804688 34.75 C 49.625 34.320312 49.40625 33.90625 49.148438 33.519531 C 48.890625 33.128906 48.59375 32.769531 48.265625 32.4375 L 19.832031 3.90625 C 19.335938 3.410156 18.777344 2.992188 18.15625 2.660156 C 17.539062 2.328125 16.882812 2.09375 16.195312 1.957031 C 15.503906 1.820312 14.808594 1.785156 14.109375 1.855469 C 13.410156 1.921875 12.738281 2.09375 12.089844 2.363281 C 11.4375 2.632812 10.84375 2.992188 10.296875 3.4375 C 9.753906 3.886719 9.289062 4.402344 8.898438 4.988281 C 8.507812 5.574219 8.210938 6.207031 8.007812 6.882812 C 7.800781 7.554688 7.699219 8.246094 7.699219 8.949219 L 7.699219 66.007812 C 7.699219 66.714844 7.800781 67.40625 8.003906 68.078125 C 8.210938 68.753906 8.507812 69.386719 8.898438 69.972656 C 9.285156 70.558594 9.753906 71.074219 10.296875 71.523438 C 10.839844 71.96875 11.4375 72.328125 12.085938 72.601562 Z M 12.085938 72.601562 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+                            </div>
+                          </div>
+                          <!-- slider navigation -->
+                        </div>
+                        <!-- right side end -->
+                      </div>
+                      <!-- slider navigation end -->
+                    </div>
+                    <!-- col end -->
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+
+                
+                <br/>
+
+
+                <!-- container -->
+              <div class="container-fluid">
+
+                <!-- row -->
+                <div class="row p-30-0">
+
+                  <!-- col -->
+                  <div class="col-lg-12">
+
+                    <!-- section title -->
+                    <div class="art-section-title">
+                      <!-- title frame -->
+                      <div class="art-title-frame">
+                        <!-- title -->
+                        <h3>Contact information 👋</h3>
+                      </div>
+                      <!-- title frame end -->
+                    </div>
+                    <!-- section title end -->
+
+                  </div>
+                  <!-- col end -->
+                  <!-- col -->
+                  <div class="col-lg-5">
+                    <!-- contact card -->
+                    <div class="art-a art-card">
+                      <div class="art-table p-15-15">
+                        <ul>
+
+                          <li>
+                            <h6>City:</h6><span>Ghaziabad</span>
+                          </li>
+                          <li>
+                            <h6>Residence:</h6><span>INDIA</span>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- contact card end -->
+                  </div>
+                  <!-- col end -->
+                  <!-- col -->
+                  <div class="col-lg-7">
+                    <!-- contact card -->
+                    <div class="art-a art-card">
+                      <div class="art-table p-15-15">
+                        <ul>
+                          <li>
+                            <h6>Email:</h6><span>saifmalik3300@gmail.com</span>
+                          </li>
+                          <li>
+                            <h6>Telegram:</h6><span>@saifmalikk</span>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- contact card end -->
+                  </div>
+                  <!-- col end -->
+                  <!-- col -->
+
+                  <!-- col contact via email-->
+                  <div class="col-lg-8">
+
+                    <!-- section title -->
+                    <div class="art-section-title">
+                      <!-- title frame -->
+                      <div class="art-title-frame">
+                        <!-- title -->
+                        <h4>Send message</h4>
+                      </div>
+                      <!-- title frame end -->
+                    </div>
+                    <!-- section title end -->
+
+                    <!-- contact form frame -->
+                    <div class="art-a art-card">
+
+                      <script>
+                        function confirmFormSuccess() {
+
+                          window.setTimeout(function() {
+                                
+                            document.getElementById("form-status").style.display = "inline";
+
+                          }, 1000);
+
+                          window.setTimeout(function() {
+                                
+                            document.getElementById("form-status").style.display = "none";
+
+                          }, 4000);
+
+                          window.setTimeout(function() {
+                                
+                            document.getElementById("form-success").style.display = "inline";
+
+                          }, 5000);
+
+
+
+
+                        }
+
+
+                      </script>
+                      <!-- contact form -->
+                      <form id="form" action="https://formsubmit.co/cbcdd800e453d432c8f8f5a837d9947f" method="POST" class="art-contact-form" onsubmit="confirmFormSuccess();">
+                        
+                        <input type="hidden" name="_subject" value="Someone msg from your website!">
+
+                        <input type="hidden" name="_next" value="https://saifmalik.engineer/thanks.html" data-no-swup>
+
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <!-- form field -->
+                        <div class="art-form-field">
+                          <!-- name input -->
+                          <input id="name" name="name" class="art-input" type="text" placeholder="Your Name" required autocomplete="off">
+                          <!-- label -->
+                          <label for="name"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" version="1.0"><path fill="#000000" d="M 37.5 0 C 27.140625 0 18.75 8.390625 18.75 18.75 C 18.75 29.085938 27.140625 37.5 37.5 37.5 C 47.859375 37.5 56.25 29.085938 56.25 18.75 C 56.25 8.390625 47.859375 0 37.5 0 Z M 37.5 46.875 C 25.007812 46.875 0 53.132812 0 65.625 L 0 75 L 75 75 L 75 65.625 C 75 53.132812 49.992188 46.875 37.5 46.875 Z M 37.5 46.875 " fill-opacity="1" fill-rule="nonzero"/></svg></i></label>
+                        </div>
+                        <!-- form field end -->
+                        <!-- form field -->
+                        <div class="art-form-field">
+                          <!-- email input -->
+                          <input id="email" name="email" class="art-input" type="email" placeholder="Your Email" required>
+                          <!-- label -->
+                          <label for="email"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><path fill="#000000" d="M 44.761719 26.632812 C 43.898438 26.414062 42.71875 26.199219 41.429688 26.199219 C 34.335938 26.199219 28.75 33.203125 28.75 41.503906 C 28.75 45.59375 30.578125 48.183594 34.121094 48.183594 C 38.097656 48.183594 42.289062 43.117188 43.25 36.871094 Z M 54.324219 71.132812 C 47.875 74.039062 42.289062 75.011719 34.554688 75.011719 C 16.710938 75.011719 1.023438 62.1875 1.023438 41.070312 C 1.023438 19.089844 17.035156 0.0195312 41.214844 0.0195312 C 60.234375 0.0195312 73.773438 13.054688 73.773438 31.160156 C 73.773438 46.996094 64.960938 56.910156 53.359375 56.910156 C 48.304688 56.910156 44.652344 54.214844 44.117188 48.613281 L 43.898438 48.613281 C 40.460938 54 35.734375 56.910156 29.933594 56.910156 C 23.050781 56.910156 17.898438 51.628906 17.898438 42.792969 C 17.898438 29.542969 27.675781 17.6875 43.148438 17.6875 C 47.875 17.6875 53.246094 18.871094 55.933594 20.273438 L 52.710938 40.320312 C 51.636719 46.671875 52.386719 49.582031 55.394531 49.691406 C 60.015625 49.902344 65.820312 43.980469 65.820312 31.480469 C 65.820312 17.367188 56.796875 6.59375 40.136719 6.59375 C 23.589844 6.59375 9.300781 19.410156 9.300781 40.101562 C 9.300781 58.203125 20.691406 68.328125 36.699219 68.328125 C 42.179688 68.328125 48.09375 67.144531 52.386719 64.992188 L 54.324219 71.132812 " fill-opacity="1" fill-rule="nonzero"/></svg></label>
+                          
+                        </div>
+                        <!-- form field end -->
+                        <!-- form field -->
+                        <div class="art-form-field">
+                          <!-- message textarea -->
+                          <textarea id="message" name="message" class="art-input" placeholder="Message" required></textarea>
+                          <!-- label -->
+                          <label for="message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><path fill="#000000" d="M 17.042969 70.5 C 16.65625 70.5 16.261719 70.414062 15.898438 70.238281 C 14.976562 69.800781 14.394531 68.886719 14.394531 67.875 L 14.394531 60 C 9.816406 60 1.152344 57.257812 1.152344 46.875 L 1.152344 20.625 C 1.152344 16.085938 3.921875 7.5 14.394531 7.5 L 62.074219 7.5 C 66.652344 7.5 75.316406 10.242188 75.316406 20.625 L 75.316406 46.875 C 75.316406 51.414062 73.101562 60 64.722656 60 L 31.21875 60 L 18.699219 69.925781 C 18.21875 70.304688 17.636719 70.5 17.042969 70.5 Z M 17.042969 54.75 C 18.507812 54.75 19.691406 55.921875 19.691406 57.375 L 19.691406 62.414062 L 28.632812 55.324219 C 29.105469 54.953125 29.6875 54.75 30.289062 54.75 L 64.722656 54.75 C 69.910156 54.75 70.015625 47.1875 70.019531 46.867188 L 70.019531 20.625 C 70.019531 13.214844 63.386719 12.765625 62.054688 12.75 L 14.394531 12.75 C 6.917969 12.75 6.464844 19.320312 6.449219 20.636719 L 6.449219 46.875 C 6.449219 54.285156 13.078125 54.734375 14.410156 54.75 Z M 43.53125 33.75 C 43.53125 30.847656 41.160156 28.5 38.234375 28.5 C 35.308594 28.5 32.9375 30.847656 32.9375 33.75 C 32.9375 36.652344 35.308594 39 38.234375 39 C 41.160156 39 43.53125 36.652344 43.53125 33.75 Z M 27.640625 33.75 C 27.640625 30.847656 25.269531 28.5 22.339844 28.5 C 19.414062 28.5 17.042969 30.847656 17.042969 33.75 C 17.042969 36.652344 19.414062 39 22.339844 39 C 25.269531 39 27.640625 36.652344 27.640625 33.75 Z M 59.421875 33.75 C 59.421875 30.847656 57.054688 28.5 54.125 28.5 C 51.199219 28.5 48.828125 30.847656 48.828125 33.75 C 48.828125 36.652344 51.199219 39 54.125 39 C 57.054688 39 59.421875 36.652344 59.421875 33.75 Z M 59.421875 33.75 " fill-opacity="1" fill-rule="nonzero"/></svg></label>
+                        </div>
+                        <!-- form field end -->
+                        <!-- button -->
+                        <div class="art-submit-frame">
+                          <button class="art-btn art-btn-md art-submit" type="submit"><span>Send message</span></button>
+                          
+                          <!-- status -->
+                          <div id="form-status" style="display:none; float: right; margin-right:89px;">
+                            Sending msg . . .
+                          </div>
+
+                          
+                          <!-- success -->
+                          <div id="form-success" style="display:none; float: right;">
+                            Successfully Sent <input class="art-btn art-btn-md" onclick="resetForm()" type="button" value="Ok"></input>
+                          </div>
+
+                          <script>
+                            function resetForm(){
+                              
+                              window.setTimeout(function() {
+                                
+                                document.getElementById("form-success").style.display = "none";
+
+                              }, 1000);
+
+                              window.setTimeout(function() {
+                                
+                                document.getElementById("form").reset();                               
+
+                              }, 2000);
+
+                            }
+                          </script>
+
+                        </div>
+                      </form>
+                      <!-- contact form end -->
+
+                    </div>
+                    <!-- contact form frame end -->
+
+                  </div>
+                  <!-- col end -->
+
+                <!-- col contact via chat-->
+                  <div class="col-lg-4">
+
+                    <!-- section title -->
+                    <div class="art-section-title">
+                      <!-- title frame -->
+                      <div class="art-title-frame">
+                        <!-- title -->
+                        <h4>Chat box</h4>
+                      </div>
+                      <!-- title frame end -->
+                    </div>
+                    <!-- section title end -->
+
+                    <!-- chat box frame -->
+                    
+    <script>
+            let userName;
+    let userPicture;
+
+    const google_login = () => {
+      var provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(function (result) {
+          var token = result.credential.accessToken;
+          let user = result.user;
+
+          userName = user.displayName;
+
+          userPicture = user.photoURL;
+
+          //console.log("user ===> ", user);
+
+          document.getElementById("login-box").style.display = "none";
+          document.getElementById("msg-box").style.display = "block";
+        })
+        .catch(function (error) {
+          console.log(error.message);
+        });
+    };
+
+    const sendMessage = () => {
+      let message = document.getElementById("chatmessage").value;
+      
+        //don't send empty message
+        if(message.length > 0){
+
+          firebase.database().ref("messages").push().set({
+            sender: userName,
+            message: message,
+            picture: userPicture,
+          });
+          let message1 = document.getElementById("message");
+          message1.value = "";
+        }
+                  return false;
+
+    };
+
+    </script>
+    <!-- chat box area -->
+    <div id="wrapper" class="art-a art-card" >
+      <div id="login-box" class="align-center" style="display: block; text-align: center; padding: 35px;">
+        <button
+          type="submit"
+          class="login-with-google-btn"
+          onclick="google_login()"
+        >
+          Log in with Google
+        </button>
+      </div>
+
+      <div id="msg-box" style="display: none">
+        <div id="chatbox">
+          <ul id="messages" style="list-style-type: none; padding: 10px"></ul>
+        </div>
+        <!--  
+        <form onsubmit="return sendMessage();">
+            <input name="usermsg" type="text" id="usermsg" size="63" placeholder="Text Message" />
+            <button id="button" class="button">Send</button>
+        </form> -->
+
+        <form onsubmit="return sendMessage();">
+          <input
+            type="text"
+            id="chatmessage"
+            class="usermsg"
+            size="63"
+            placeholder="Text Message"
+            autocomplete="off"
+            onclick="scrollChat();"
+          />
+          <input type="submit" class="art-btn art-btn-md art-submit send-msg-btn" value="SEND" />
+        </form>
+        <!-- <ul id="messages"></ul> -->
+      </div>
+    </div>
+      <script>
+    userName = "NULL";
+    // listen for incoming messages
+    firebase
+      .database()
+      .ref("messages")
+      .on("child_added", function (snapshot) {
+        var html = "";
+        // give each message a unique ID
+        html += "<li id='message-" + snapshot.key + "'>";
+
+        html +=
+          "<img style='margin-top:15px !important; width:30px !important; height:30px !important; border-radius:50% !important;' src=" +
+          snapshot.val().picture +
+          "></img>" +
+          "<h6 class='username'> &nbsp; " +
+          snapshot.val().sender +
+          "</h6>  : <br/> <p style='font-size:13px !important; margin-left: 8px !important; margin-top: 2px !important; color: black !important; background-color: #dcd6d6; border-radius: 0px 12px 12px 12px !important; padding:10px;'>" +
+          snapshot.val().message +
+          "</p>";
+        html += "</li>";
+        /*
+        // show delete button if message is sent me
+        if (snapshot.val().sender == userName) {
+          html +=
+            "<button data-id='" +
+            snapshot.key +
+            "' onclick='deleteMessage(this);'>";
+          html += "Delete";
+          html += "</button>";
+        };
+        */
+
+        document.getElementById("messages").innerHTML += html;
+
+      // auto scroll to bottom of chat box when new text is added
+      var elem = document.getElementById("chatbox");
+      elem.scrollTop = elem.scrollHeight;
+
+      });
+    function deleteMessage(self) {
+      // get message ID
+      var messageId = self.getAttribute("data-id");
+
+      // delete message
+      firebase.database().ref("messages").child(messageId).remove();
+    }
+
+    // attach listener for delete message
+    firebase
+      .database()
+      .ref("messages")
+      .on("child_removed", function (snapshot) {
+        // remove message node
+        document.getElementById("message-" + snapshot.key).innerHTML =
+          "This message has been removed";
+      });
+
+    // auto scroll to bottom of chat box
+    function scrollChat() {
+      var elem = document.getElementById("chatbox");
+      elem.scrollTop = elem.scrollHeight;
+    };
+
+  </script>
+
+                    <!-- chat box frame end -->
+
+                  </div>
+                  <!-- col end -->
+
+
+
+                </div>
+                <!-- row end -->
+
+              </div>
+              <!-- container end -->
+
+              <br/>
+
+                <!-- container -->
+                <div class="container-fluid" >
+                  <!-- footer -->
+                  <footer >
+                    <!-- copyright -->
+                    <div> &#169; saif-mal1k 2022 - ♾</span></div>
+                    <!-- author ( Please! Do not delete it. You are awesome! :) -->
+                    <div>
+                      Page author:&#160;
+                      <a style=" font-family: 'Brittany Signature', cursive !important;  font-size: 16px;" href="https://github.com/" target="_blank" data-no-swup
+                        >Saif Malik</a
+                      >
+                    </div>
+                  </footer>
+                  <!-- footer end -->
+                </div>
+                <!-- container end -->
+              </div>
+              <!-- scroll frame end -->
+            </div>
+            <!-- swup container end -->
+          </div>
+          <!-- content end -->
+
+
+
+
+          <!-- skills, languages, social media links  -->
+          <!-- info bar -->
+          <div class="art-info-bar">
+            <!-- menu bar frame -->
+            <div class="art-info-bar-frame">
+              <!-- info bar header -->
+              <div class="art-info-bar-header">
+                <!-- info bar button -->
+                <div class="art-info-bar-btn">
+                  <!-- icon -->
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="30" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 2 10.03125 L 73 10.03125 L 73 64.78125 L 2 64.78125 Z M 2 10.03125 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 65.09375 44.871094 L 27.636719 44.871094 C 17.980469 44.871094 17.976562 29.941406 27.636719 29.941406 L 65.09375 29.941406 C 74.746094 29.941406 74.75 44.871094 65.09375 44.871094 Z M 65.09375 49.847656 L 27.636719 49.847656 C 17.976562 49.847656 17.980469 64.78125 27.636719 64.78125 L 65.09375 64.78125 C 74.75 64.78125 74.746094 49.847656 65.09375 49.847656 Z M 10.15625 10.03125 C 0.167969 10.03125 0.167969 24.964844 10.15625 24.964844 C 20.144531 24.964844 20.144531 10.03125 10.15625 10.03125 Z M 10.15625 29.941406 C 0.167969 29.941406 0.167969 44.871094 10.15625 44.871094 C 20.144531 44.871094 20.144531 29.941406 10.15625 29.941406 Z M 10.15625 49.847656 C 0.167969 49.847656 0.167969 64.78125 10.15625 64.78125 C 20.144531 64.78125 20.144531 49.847656 10.15625 49.847656 Z M 27.636719 24.964844 L 65.09375 24.964844 C 74.75 24.964844 74.746094 10.03125 65.09375 10.03125 L 27.636719 10.03125 C 17.976562 10.03125 17.980469 24.964844 27.636719 24.964844 Z M 27.636719 24.964844 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+
+                </div>
+                <!-- info bar button end -->
+              </div>
+              <!-- info bar header end -->
+
+              <!-- info bar header -->
+              <div class="art-header">
+                <!-- avatar -->
+                <div class="art-avatar">
+                  <a
+                    data-no-swup
+                    href="#"
+                    class="art-avatar-curtain"
+                  >
+                    <img src="https://avatars.githubusercontent.com/u/63545175?v=4" alt="my picture" />
+                  </a>
+                  <!-- available -->
+                  <div class="art-lamp-light">
+                    <!-- add class 'art-not-available' if not available-->
+                    <div class="art-available-lamp"><img width="24px"  src="https://static.wixstatic.com/media/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png/v1/fill/w_676,h_673,al_c/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png"></div>
+                  </div>
+                </div>
+                <!-- avatar end -->
+
+              </div>
+              <!-- info bar header end -->
+
+              <!-- scroll frame -->
+              <div id="scrollbar2" class="art-scroll-frame">
+                <!-- info bar about -->
+                <div class="art-table p-15-15">
+                  <!-- about text -->
+                  <ul>
+                    <!-- Name -->
+                    <li>
+                      <h6>My Name:</h6>
+                      <span>Saif Malik</span>
+                    </li>
+                    <!-- age -->
+                    <li>
+                      <h6>Age:</h6>
+                      <span>22</span>
+                    </li>
+
+                    <!-- city -->
+                    <li>
+                      <h6>City:</h6>
+                      <span>Ghaziabad</span>
+                    </li>
+                    <!-- country -->
+                    <li>
+                      <h6>Residence:</h6>
+                      <span>INDIA</span>
+                    </li>
+                  </ul>
+                </div>
+                <!-- info bar about end -->
+
+                <!-- divider -->
+                <div class="art-ls-divider"></div>
+
+                <br/>
+
+                  <h5>Languages known:</h5>
+
+                <!-- language skills -->
+                <div class="art-lang-skills p-30-15">
+                
+                  
+                  <!-- skill -->
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog1" class="art-cirkle-progress"></div>
+                    <!-- title -->
+                    <h6>Hindi</h6>
+                  </div>
+                  <!-- skill end -->
+
+                  <!-- skill -->
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog2" class="art-cirkle-progress"></div>
+                    <!-- title -->
+                    <h6>English</h6>
+                  </div>
+                  <!-- skill end -->
+
+                  <!-- skill -->
+                  <div class="art-lang-skills-item">
+                    <div id="circleprog3" class="art-cirkle-progress"></div>
+                    <!-- title -->
+                    <h6>German</h6>
+                  </div>
+                  <!-- skill end -->
+                </div>
+                <!-- language skills end -->
+
+                <!-- divider -->
+                <div class="art-ls-divider"></div>
+
+                <!-- hard skills -->
+                <div class="art-hard-skills p-30-15" >
+                  <h5>Web Development:</h5>
+
+                  <br/>
+
+                  <!-- skill -->
+                  <div class="art-hard-skills-item" style="margin-left: 8px;">
+                    <div class="art-skill-heading">
+                      <!-- title -->
+                      <h6 >html</h6>
+                    </div>
+                    <!-- progressbar frame -->
+                    <div class="art-line-progress">
+                      <!-- progressbar -->
+                      <div id="lineprog1"></div>
+                    </div>
+                    <!-- progressbar frame end -->
+                  </div>
+                  <!-- skill end -->
+
+                  <!-- skill -->
+                  <div class="art-hard-skills-item" style="margin-left: 8px;">
+                    <div class="art-skill-heading">
+                      <!-- title -->
+                      <h6>CSS</h6>
+                    </div>
+                    <!-- progressbar frame -->
+                    <div class="art-line-progress">
+                      <!-- progressbar -->
+                      <div id="lineprog2"></div>
+                    </div>
+                    <!-- progressbar frame end -->
+                  </div>
+                  <!-- skill end -->
+
+                  <!-- skill -->
+                  <div class="art-hard-skills-item" style="margin-left: 8px;">
+                    <div class="art-skill-heading">
+                      <!-- title -->
+                      <h6>Js</h6>
+                    </div>
+                    <!-- progressbar frame -->
+                    <div class="art-line-progress">
+                      <!-- progressbar -->
+                      <div id="lineprog3"></div>
+                    </div>
+                    <!-- progressbar frame end -->
+                  </div>
+                  <!-- skill end -->
+
+                  <br/>
+
+                  <h5>programming languages:</h5>
+
+                  <br/>                  
+                
+                  <!-- skill -->
+                  <div class="art-hard-skills-item" style="margin-left: 8px;">
+                    <div class="art-skill-heading">
+                      <!-- title -->
+                      <h6>Python</h6>
+                    </div>
+                    <!-- progressbar frame -->
+                    <div class="art-line-progress">
+                      <!-- progressbar -->
+                      <div id="lineprog4"></div>
+                    </div>
+                    <!-- progressbar frame end -->
+                  </div>
+                  <!-- skill end -->
+
+                  <!-- skill -->
+                  <div class="art-hard-skills-item" style="margin-left: 8px;">
+                    <div class="art-skill-heading">
+                      <!-- title -->
+                      <h6>C++</h6>
+                    </div>
+                    <!-- progressbar frame -->
+                    <div class="art-line-progress">
+                      <!-- progressbar -->
+                      <div id="lineprog5"></div>
+                    </div>
+                    <!-- progressbar frame end -->
+                  </div>
+                  <!-- skill end -->
+                </div>
+                <!-- language skills end -->
+
+                <!-- divider -->
+                <div class="art-ls-divider"></div>
+
+                <br/>
+
+                <!-- tech stack -->
+                <h6>Tech Stack</h6>
+
+                <!-- knowledge list -->
+                <ul type="disc" class="art-knowledge-list p-15-0">
+                  <!-- list item -->
+                  <li>Bootstrap, Firebase</li>
+                  <!-- list item -->
+                  <li>VS code, GCP</li>
+                  <!-- list item -->
+                  <li>GIT VCS, Github</li>
+                </ul>
+                
+                <!-- tech stack end -->
+
+                <!-- divider -->
+                <div class="art-ls-divider"></div>
+
+                <!-- links frame -->
+                <div class="art-links-frame p-15-15" style="align-content: center; align-items: center;">
+                  <!-- download resume button -->
+                  <a href="https://drive.google.com/file/d/1r93Qi2i_enwik2L6thOegEopNrtNrhPm/view" title="click to download" class="art-link" download data-no-swup
+                    style="font-size: 100%;">Download RESUME <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 5.011719 45 L 70.261719 45 L 70.261719 74 L 5.011719 74 Z M 5.011719 45 " clip-rule="nonzero"/></clipPath></defs><path d="M 37.636719 0.546875 C 35.09375 0.546875 33.023438 2.597656 33.023438 5.117188 L 33.023438 39.144531 L 26.871094 33.050781 C 24.734375 30.992188 21.988281 31.515625 20.394531 33.097656 C 18.796875 34.675781 18.269531 37.386719 20.359375 39.527344 L 34.359375 53.402344 C 35.191406 54.257812 36.335938 54.734375 37.574219 54.742188 C 37.589844 54.742188 37.601562 54.742188 37.613281 54.742188 C 38.851562 54.742188 40.050781 54.261719 40.898438 53.417969 L 54.925781 39.515625 C 57 37.386719 56.46875 34.675781 54.878906 33.09375 C 53.285156 31.515625 50.546875 30.996094 48.390625 33.0625 L 42.25 39.144531 L 42.25 5.117188 C 42.25 2.597656 40.179688 0.546875 37.636719 0.546875 Z M 37.636719 0.546875 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#id1)"><path d="M 9.605469 45.609375 C 7.0625 45.609375 4.992188 47.660156 4.992188 50.183594 L 4.992188 55.242188 C 4.992188 65.421875 13.347656 73.703125 23.621094 73.703125 L 51.652344 73.703125 C 61.925781 73.703125 70.28125 65.421875 70.28125 55.242188 L 70.28125 50.183594 C 70.28125 47.660156 68.210938 45.609375 65.667969 45.609375 C 63.125 45.609375 61.054688 47.660156 61.054688 50.183594 L 61.054688 55.242188 C 61.054688 60.378906 56.835938 64.558594 51.652344 64.558594 L 23.621094 64.558594 C 18.4375 64.558594 14.21875 60.378906 14.21875 55.242188 L 14.21875 50.183594 C 14.21875 47.660156 12.148438 45.609375 9.605469 45.609375 Z M 9.605469 45.609375 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
+                  </a>
+                </div>
+                <!-- links frame end -->
+              </div>
+              <!-- scroll frame end -->
+
+              <!-- sidebar social -->
+              <div class="art-ls-social" >
+                <!-- social link -->
+                <a  data-no-swup href="https://linkedin.com/in/saifmalik" target="_blank" rel="noopener noreferrer" title="LinkedIn profile">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" width="20" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0"><path d="M 68.734375 0 C 72.195312 0 75 2.804688 75 6.265625 L 75 68.734375 C 75 72.195312 72.195312 75 68.734375 75 L 6.265625 75 C 2.804688 75 0 72.195312 0 68.734375 L 0 6.265625 C 0 2.804688 2.804688 0 6.265625 0 Z M 50.695312 28.125 C 45.371094 28.125 41.730469 30.476562 40.109375 33.210938 L 39.84375 33.695312 L 39.84375 28.59375 L 29.6875 28.59375 L 29.6875 64.53125 L 40.625 64.53125 L 40.625 47.125 C 40.625 41.289062 42.773438 37.578125 47.9375 37.578125 C 51.5 37.578125 52.992188 40.726562 53.117188 46.34375 L 53.125 47.125 L 53.125 64.53125 L 64.0625 64.53125 L 64.0625 44.683594 C 64.0625 33.964844 61.5 28.125 50.695312 28.125 Z M 21.875 28.125 L 10.9375 28.125 L 10.9375 64.0625 L 21.875 64.0625 Z M 16.40625 9.375 C 12.523438 9.375 9.375 12.523438 9.375 16.40625 C 9.375 20.289062 12.523438 23.4375 16.40625 23.4375 C 20.289062 23.4375 23.4375 20.289062 23.4375 16.40625 C 23.4375 12.523438 20.289062 9.375 16.40625 9.375 Z M 16.40625 9.375 " fill-opacity="1" fill-rule="evenodd"/></svg></a>
+                <!-- social link -->
+                <a data-no-swup  href="https://github.com/saif-mal1k" target="_blank"rel="noopener noreferrer" title="Github profile">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0"><path d="M 37.5 0.703125 C 16.78125 0.703125 0 17.484375 0 38.203125 C 0 54.796875 10.734375 68.8125 25.640625 73.78125 C 27.515625 74.109375 28.21875 72.984375 28.21875 72 C 28.21875 71.109375 28.171875 68.15625 28.171875 65.015625 C 18.75 66.75 16.3125 62.71875 15.5625 60.609375 C 15.140625 59.53125 13.3125 56.203125 11.71875 55.3125 C 10.40625 54.609375 8.53125 52.875 11.671875 52.828125 C 14.625 52.78125 16.734375 55.546875 17.4375 56.671875 C 20.8125 62.34375 26.203125 60.75 28.359375 59.765625 C 28.6875 57.328125 29.671875 55.6875 30.75 54.75 C 22.40625 53.8125 13.6875 50.578125 13.6875 36.234375 C 13.6875 32.15625 15.140625 28.78125 17.53125 26.15625 C 17.15625 25.21875 15.84375 21.375 17.90625 16.21875 C 17.90625 16.21875 21.046875 15.234375 28.21875 20.0625 C 31.21875 19.21875 34.40625 18.796875 37.59375 18.796875 C 40.78125 18.796875 43.96875 19.21875 46.96875 20.0625 C 54.140625 15.1875 57.28125 16.21875 57.28125 16.21875 C 59.34375 21.375 58.03125 25.21875 57.65625 26.15625 C 60.046875 28.78125 61.5 32.109375 61.5 36.234375 C 61.5 50.625 52.734375 53.8125 44.390625 54.75 C 45.75 55.921875 46.921875 58.171875 46.921875 61.6875 C 46.921875 66.703125 46.875 70.734375 46.875 72 C 46.875 72.984375 47.578125 74.15625 49.453125 73.78125 C 51.304688 73.15625 53.09375 72.390625 54.824219 71.488281 C 56.554688 70.585938 58.207031 69.550781 59.777344 68.390625 C 61.347656 67.230469 62.816406 65.953125 64.1875 64.5625 C 65.558594 63.171875 66.8125 61.683594 67.953125 60.097656 C 69.089844 58.511719 70.101562 56.847656 70.980469 55.105469 C 71.859375 53.363281 72.597656 51.5625 73.195312 49.703125 C 73.792969 47.84375 74.242188 45.953125 74.546875 44.023438 C 74.847656 42.09375 75 40.15625 75 38.203125 C 75 17.484375 58.21875 0.703125 37.5 0.703125 Z M 37.5 0.703125 " fill-opacity="1" fill-rule="nonzero"/></svg></a>
+                <!-- social link -->
+                <a data-no-swup  href="https://trailblazer.me/id/saif-malik" target="_blank" rel="noopener noreferrer" title="Trailblazer profile">
+                  <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" width="20" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 0 L 75 0 L 75 73.5 L 0 73.5 Z M 0 0 " clip-rule="nonzero"/></clipPath></defs><path fill="#d9d9d9" d="M 16.140625 53.6875 L 12.210938 58.214844 L 20.066406 58.214844 Z M 16.140625 53.6875 " fill-opacity="1" fill-rule="nonzero"/><path d="M 19.820312 62.984375 L 27.679688 62.984375 L 23.75 58.457031 Z M 19.820312 62.984375 " fill-opacity="1" fill-rule="nonzero"/><path  d="M 51.25 59.804688 L 55.179688 55.277344 L 59.105469 59.804688 Z M 51.25 59.804688 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#id1)"><path  d="M 38.480469 0.367188 C 37.867188 0 37.007812 0 36.394531 0.367188 C 14.421875 9.660156 0.300781 31.308594 0.671875 55.15625 L 0.671875 60.414062 C 0.671875 61.269531 1.039062 62.003906 1.777344 62.492188 C 12.332031 69.464844 24.855469 73.378906 37.5 73.5 L 38.851562 73.5 C 51.003906 73.011719 62.914062 69.34375 72.980469 62.492188 C 73.59375 62.003906 74.082031 61.269531 74.082031 60.414062 L 74.082031 55.15625 C 74.699219 31.308594 60.578125 9.660156 38.480469 0.367188 Z M 18.59375 19.691406 C 27.554688 9.171875 37.5 5.625 37.5 5.625 C 39.585938 6.605469 63.527344 15.898438 68.4375 45.984375 L 62.175781 45.984375 L 50.144531 28.738281 C 49.285156 27.640625 47.6875 27.273438 46.460938 28.128906 C 46.09375 28.25 45.972656 28.617188 45.847656 28.738281 L 42.777344 33.140625 L 34.308594 21.035156 C 33.449219 19.933594 31.851562 19.566406 30.625 20.421875 C 30.257812 20.546875 30.132812 20.914062 30.011719 21.035156 L 12.945312 45.859375 L 6.6875 46.105469 C 8.527344 34.609375 13.316406 26.050781 18.59375 19.691406 Z M 55.792969 46.105469 L 40.199219 46.105469 L 44.253906 40.359375 L 47.933594 34.976562 Z M 33.695312 28.984375 L 39.832031 37.789062 L 34.0625 45.984375 L 19.207031 45.984375 L 25.46875 36.6875 L 32.097656 26.90625 Z M 39.585938 64.449219 L 37.378906 68.363281 C 32.835938 68.363281 28.660156 67.753906 23.875 66.652344 C 17.613281 65.0625 11.472656 62.492188 6.074219 59.191406 L 6.074219 55.398438 C 6.074219 54.175781 6.074219 52.832031 6.195312 51.363281 L 33.324219 51.363281 C 31.238281 54.542969 32.222656 58.824219 35.535156 60.78125 C 35.902344 60.902344 36.148438 61.148438 36.394531 61.269531 L 38.851562 62.371094 C 39.585938 62.617188 39.832031 63.59375 39.585938 64.449219 Z M 69.050781 58.945312 C 65 61.394531 60.824219 63.472656 56.527344 64.816406 C 56.527344 64.816406 55.667969 65.183594 55.421875 65.183594 C 52.96875 66.039062 50.511719 66.652344 47.933594 67.140625 C 46.460938 67.507812 44.988281 67.628906 43.636719 67.753906 L 44.128906 66.894531 C 46.09375 63.59375 44.988281 59.4375 41.550781 57.480469 C 41.429688 57.355469 41.058594 57.355469 40.9375 57.113281 L 38.480469 56.011719 C 37.621094 55.644531 37.253906 54.789062 37.621094 53.933594 C 37.621094 53.808594 37.746094 53.566406 37.746094 53.566406 L 39.957031 50.996094 L 68.804688 50.996094 C 68.804688 52.21875 68.925781 53.566406 68.925781 55.035156 L 68.925781 58.945312 Z M 69.050781 58.945312 " fill-opacity="1" fill-rule="nonzero"/></g></svg></a>
+                <!-- social link -->
+                <a  data-no-swup href="#" target="_blank" rel="noopener noreferrer" title="Coding profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20px"  fill="currentColor" viewBox="0 0 76.533 39.026"><path d="M2380.7,6597.866a12.252,12.252,0,0,0-.261-1.513l-30.726-.027a12.545,12.545,0,0,1,.908-3.443,12.337,12.337,0,0,1,2.739-4.044,12.151,12.151,0,0,1,4.018-2.581,12.634,12.634,0,0,1,14.3,3.051l4.852-4.748a18.176,18.176,0,0,0-6.131-4.331,20.037,20.037,0,0,0-8.112-1.564,20.25,20.25,0,0,0-7.671,1.459,19.158,19.158,0,0,0-6.261,4.07,19.584,19.584,0,0,0-4.226,6.184,18.7,18.7,0,0,0-1.487,5.947h-.2a18.674,18.674,0,0,0-1.489-5.947,19.544,19.544,0,0,0-4.226-6.184,19.133,19.133,0,0,0-6.261-4.07,21.354,21.354,0,0,0-15.783.1,18.2,18.2,0,0,0-6.131,4.331l4.853,4.748a13.264,13.264,0,0,1,14.3-3.051,12.131,12.131,0,0,1,4.017,2.581,12.323,12.323,0,0,1,2.74,4.044,12.527,12.527,0,0,1,.908,3.443l-30.726.027a12.256,12.256,0,0,0-.261,1.513,15,15,0,0,0-.1,1.773,20.713,20.713,0,0,0,1.1,6.783,15.709,15.709,0,0,0,3.443,5.686,17.309,17.309,0,0,0,6,4.123,20.587,20.587,0,0,0,7.983,1.46,20.226,20.226,0,0,0,7.669-1.46,19.086,19.086,0,0,0,6.261-4.07,19.506,19.506,0,0,0,4.226-6.184,18.163,18.163,0,0,0,1.153-3.629h.871a18.27,18.27,0,0,0,1.151,3.629,19.545,19.545,0,0,0,4.226,6.184,19.111,19.111,0,0,0,6.261,4.07,20.241,20.241,0,0,0,7.671,1.46,20.572,20.572,0,0,0,7.981-1.46,17.282,17.282,0,0,0,6-4.123,15.717,15.717,0,0,0,3.445-5.686,20.726,20.726,0,0,0,1.1-6.783A15.259,15.259,0,0,0,2380.7,6597.866Zm-46.245,5.608a12.1,12.1,0,0,1-2.766,4.043,12.467,12.467,0,0,1-4.043,2.583,14.378,14.378,0,0,1-9.939.052,11.776,11.776,0,0,1-3.522-2.218,8.459,8.459,0,0,1-1.8-2.374,13.476,13.476,0,0,1-1.173-3.208l23.658,0A11.487,11.487,0,0,1,2334.457,6603.475Zm38.236,2.086a8.466,8.466,0,0,1-1.8,2.374,11.771,11.771,0,0,1-3.522,2.218,14.378,14.378,0,0,1-9.939-.052,12.491,12.491,0,0,1-4.044-2.583,12.088,12.088,0,0,1-2.765-4.043,11.427,11.427,0,0,1-.415-1.126h11.92v0h11.739A13.509,13.509,0,0,1,2372.692,6605.561Z" transform="translate(-2304.273 -6578.666)" ></path></svg></a>
+                <!-- social link -->
+                <a title="blogs" data-no-swup href="#" target="_blank"><svg fill="currentColor" width="20" viewBox="0 0 1043.63 592.71" class="de bk"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0 296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0 154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279 147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76 249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9 51.76 249.94"></path></g></g></svg></a>
+              </div>
+              <!-- sidebar social end -->
+            </div>
+            <!-- menu bar frame end -->
+          </div>
+          <!-- info bar end -->
+
+
+          
+        </div>
+        <!-- app container end -->
+      </div>
+      <!-- app wrapper end -->
+
+      <!-- preloader -->
+      <div class="art-preloader">
+        <!-- preloader content -->
+        <div class="art-preloader-content">
+          <!-- title -->
+          <h4>Welcome!</h4>
+          <!-- progressbar -->
+          <div id="preloader" class="art-preloader-load"></div>
+        </div>
+        <!-- preloader content end -->
+      </div>
+      <!-- preloader end -->
+    </div>
+    <!-- app end -->
+
+    <div id="swupMenu"></div>
+
+
+    <!-- jquery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- anime js -->
+    <script src="js/plugins/anime.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- progressbar js -->
+    <script src="js/plugins/progressbar.min.js"></script>
+    <!-- smooth scrollbar js -->
+    <script src="js/plugins/smooth-scrollbar.min.js"></script>
+    <!-- overscroll js -->
+    <script src="js/plugins/overscroll.min.js"></script>
+    <!-- typing js -->
+    <script src="js/plugins/typing.min.js"></script>
+    <!-- isotope js -->
+    <script src="js/plugins/isotope.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+
+    <!-- main js -->
+    <script src="js/main.js"></script>
+  </body>
 </html>

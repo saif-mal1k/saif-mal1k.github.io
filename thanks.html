@@ -1,11 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>thank you!</title>
     <style>
       .theme-light {
         --color-primary: rgb(240, 238, 230);
@@ -117,37 +112,60 @@
       }
     </style>
     <script>
-      // function to set a given theme/color-scheme
-      function setTheme(themeName) {
-        localStorage.setItem("theme", themeName);
-        document.documentElement.className = themeName;
-      }
+                                 // function to set a given theme/color-scheme
+                                  function setTheme(themeName) {
+                                      localStorage.setItem('theme', themeName);
+                                      document.documentElement.className = themeName;
+                                  }
+                                
+                                  // function to toggle between dark theme and light theme
+                                  function toggleTheme() {
+                                      if (localStorage.getItem('theme') === 'theme-dark') {
+                                          setTheme('theme-light');
+                                      } else {
+                                          setTheme('theme-dark');
+                                      }
+                                  }
+                                
+                                  // initial theme setup
+                                  (function () {
+                                      if (localStorage.getItem('theme') === 'theme-dark') {
+                                          setTheme('theme-dark');
+                                          document.getElementById('slider').checked = false;
+                                      } else {
+                                          setTheme('theme-light');
+                                        document.getElementById('slider').checked = true;
+                                      }
+                                  })();
+                                
+                              </script>
 
-      // function to toggle between dark theme and light theme
-      function toggleTheme() {
-        if (localStorage.getItem("theme") === "theme-dark") {
-          setTheme("theme-light");
-        } else {
-          setTheme("theme-dark");
-        }
-      }
-
-      // initial theme setup
-      (function () {
-        if (localStorage.getItem("theme") === "theme-dark") {
-          setTheme("theme-dark");
-          document.getElementById("slider").checked = false;
-        } else {
-          setTheme("theme-light");
-          document.getElementById("slider").checked = true;
-        }
-      })();
-    </script>
   </head>
   <body>
+    <header class="site-header" id="header">
+      <h1 class="site-header__title" data-lead-id="site-header-title">
+        THANK YOU!
+      </h1>
+    </header>
+
     <div>
-      <h1>Error: &nbsp; 404 <br/> page not found.</h1>
-      <h3>check the mistake in typo and try again.</h3>
+      <p>
+        Your Message has been recorded <b> I will get back to you ASAP...</b>
+      </p>
     </div>
+
+    <br />
+
+    <br />
+
+    <div>
+      <p>To Return to previous page: <a href="https://saifmalik.engineer ">Click Here</a></p>
+    </div>
+
+    <br />
+
+    <footer class="site-footer" id="footer">
+      <p class="site-footer__fineprint" id="fineprint"></p>
+    </footer>
   </body>
 </html>
