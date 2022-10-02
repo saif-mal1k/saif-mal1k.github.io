@@ -26,7 +26,7 @@ $(function() {
   // page loading
   $(document).ready(function() {
     anime({
-      targets: '.art-preloader .art-preloader-content',
+      targets: '.preloader .preloader-content',
       opacity: [0, 1],
       delay: 200,
       duration: 600,
@@ -37,13 +37,13 @@ $(function() {
     });
     
     anime({
-      targets: '.art-preloader',
+      targets: '.preloader',
       opacity: [1, 0],
       delay: 2200,
       duration: 400,
       easing: 'linear',
       complete: function(anim) {
-        $('.art-preloader').css('display', 'none');
+        $('.preloader').css('display', 'none');
       }
     });
   });
@@ -67,7 +67,7 @@ $(function() {
 
   // counters
   anime({
-    targets: '.art-counter-frame',
+    targets: '.counter-frame',
     opacity: [0, 1],
     duration: 800,
     delay: 2300,
@@ -75,11 +75,11 @@ $(function() {
   });
 
   anime({
-    targets: '.art-counter',
+    targets: '.counter',
     delay: 1300,
     opacity: [1, 1],
     complete: function(anim) {
-      $('.art-counter').each(function() {
+      $('.counter').each(function() {
         $(this).prop('Counter', 0).animate({
           Counter: $(this).text()
         }, {
@@ -234,12 +234,12 @@ $(function() {
   bar.animate(.85);
 
   // portfolio filter
-  $('.art-filter a').on('click', function() {
-    $('.art-filter .art-current').removeClass('art-current');
-    $(this).addClass('art-current');
+  $('.filter a').on('click', function() {
+    $('.filter .current').removeClass('current');
+    $(this).addClass('current');
 
     var selector = $(this).data('filter');
-    $('.art-grid').isotope({
+    $('.grid').isotope({
       filter: selector
     });
     return false;
@@ -247,7 +247,7 @@ $(function() {
 
 
   // slider testimonials
-  var swiper = new Swiper('.art-testimonial-slider', {
+  var swiper = new Swiper('.testimonial-slider', {
     slidesPerView: 2,
     spaceBetween: 30,
     speed: 1400,
@@ -258,8 +258,8 @@ $(function() {
       clickable: true,
     },
     navigation: {
-      nextEl: '.art-testi-swiper-next',
-      prevEl: '.art-testi-swiper-prev',
+      nextEl: '.testi-swiper-next',
+      prevEl: '.testi-swiper-prev',
     },
     breakpoints: {
       1500: {
@@ -275,7 +275,7 @@ $(function() {
   });
 
   // slider works
-  var swiper = new Swiper('.art-works-slider', {
+  var swiper = new Swiper('.works-slider', {
     slidesPerView: 2,
     spaceBetween: 30,
     speed: 1400,
@@ -288,8 +288,8 @@ $(function() {
       clickable: true,
     },
     navigation: {
-      nextEl: '.art-works-swiper-next',
-      prevEl: '.art-works-swiper-prev',
+      nextEl: '.works-swiper-next',
+      prevEl: '.works-swiper-prev',
     },
     breakpoints: {
       1500: {
@@ -305,7 +305,7 @@ $(function() {
   });
 
   // slider blog
-  var swiper = new Swiper('.art-blog-slider', {
+  var swiper = new Swiper('.blog-slider', {
     slidesPerView: 2,
     spaceBetween: 30,
     speed: 1400,
@@ -318,8 +318,8 @@ $(function() {
       clickable: true,
     },
     navigation: {
-      nextEl: '.art-blog-swiper-next',
-      prevEl: '.art-blog-swiper-prev',
+      nextEl: '.blog-swiper-next',
+      prevEl: '.blog-swiper-prev',
     },
     breakpoints: {
       1500: {
@@ -383,35 +383,35 @@ $(function() {
 
   $.fancybox.defaults.hash = false;
 
-  $('.current-menu-item a').clone().appendTo('.art-current-page');
+  $('.current-menu-item a').clone().appendTo('.current-page');
 
-  $('.art-map-overlay').on('click', function() {
-    $(this).addClass('art-active');
+  $('.map-overlay').on('click', function() {
+    $(this).addClass('active');
   });
 
-  $('.art-info-bar-btn').on('click', function() {
-    $('.art-info-bar').toggleClass('art-active');
-    $('.art-menu-bar-btn').toggleClass('art-disabled');
+  $('.info-bar-btn').on('click', function() {
+    $('.info-bar').toggleClass('active');
+    $('.menu-bar-btn').toggleClass('disabled');
   });
 
-  $('.art-menu-bar-btn').on('click', function() {
-    $('.art-menu-bar-btn , .art-menu-bar').toggleClass("art-active");
-    $('.art-info-bar-btn').toggleClass('art-disabled');
+  $('.menu-bar-btn').on('click', function() {
+    $('.menu-bar-btn , .menu-bar').toggleClass("active");
+    $('.info-bar-btn').toggleClass('disabled');
   });
 
-  $('.art-info-bar-btn , .art-menu-bar-btn').on('click', function() {
-    $('.art-content').toggleClass('art-active');
+  $('.info-bar-btn , .menu-bar-btn').on('click', function() {
+    $('.content').toggleClass('active');
   });
 
-  $('.art-curtain , .art-mobile-top-bar').on('click', function() {
-    $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
+  $('.curtain , .mobile-top-bar').on('click', function() {
+    $('.menu-bar-btn , .menu-bar , .info-bar , .content , .menu-bar-btn , .info-bar-btn').removeClass('active , disabled');
   });
 
   $('.menu-item').on('click', function() {
     if ($(this).hasClass('menu-item-has-children')) {
-      $(this).children('.sub-menu').toggleClass('art-active');
+      $(this).children('.sub-menu').toggleClass('active');
     } else {
-      $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
+      $('.menu-bar-btn , .menu-bar , .info-bar , .content , .menu-bar-btn , .info-bar-btn').removeClass('active , disabled');
     }
   });
 
@@ -443,12 +443,12 @@ $(function() {
 
         tl
           .add({
-            targets: '.art-submit',
+            targets: '.submit',
             opacity: 0,
             scale: .5,
           })
           .add({
-            targets: '.art-success',
+            targets: '.success',
             scale: 1,
             height: '45px',
           })
@@ -458,7 +458,7 @@ $(function() {
 
 
     // slider testimonials
-    var swiper = new Swiper('.art-testimonial-slider', {
+    var swiper = new Swiper('.testimonial-slider', {
       slidesPerView: 2,
       spaceBetween: 30,
       speed: 1400,
@@ -469,8 +469,8 @@ $(function() {
         clickable: true,
       },
       navigation: {
-        nextEl: '.art-testi-swiper-next',
-        prevEl: '.art-testi-swiper-prev',
+        nextEl: '.testi-swiper-next',
+        prevEl: '.testi-swiper-prev',
       },
       breakpoints: {
         1500: {
@@ -489,7 +489,7 @@ $(function() {
     });
 
     // slider works
-    var swiper = new Swiper('.art-works-slider', {
+    var swiper = new Swiper('.works-slider', {
       slidesPerView: 2,
       spaceBetween: 30,
       speed: 1400,
@@ -502,8 +502,8 @@ $(function() {
         clickable: true,
       },
       navigation: {
-        nextEl: '.art-works-swiper-next',
-        prevEl: '.art-works-swiper-prev',
+        nextEl: '.works-swiper-next',
+        prevEl: '.works-swiper-prev',
       },
       breakpoints: {
         1500: {
@@ -519,7 +519,7 @@ $(function() {
     });
 
     // slider blog
-    var swiper = new Swiper('.art-blog-slider', {
+    var swiper = new Swiper('.blog-slider', {
       slidesPerView: 2,
       spaceBetween: 30,
       speed: 1400,
@@ -532,8 +532,8 @@ $(function() {
         clickable: true,
       },
       navigation: {
-        nextEl: '.art-blog-swiper-next',
-        prevEl: '.art-blog-swiper-prev',
+        nextEl: '.blog-swiper-next',
+        prevEl: '.blog-swiper-prev',
       },
       breakpoints: {
         1500: {
@@ -586,13 +586,13 @@ $(function() {
 
     $.fancybox.defaults.hash = false;
 
-    $('.current-menu-item a').clone().prependTo('.art-current-page');
+    $('.current-menu-item a').clone().prependTo('.current-page');
 
     $('.menu-item').on('click', function() {
       if ($(this).hasClass('menu-item-has-children')) {
-        $(this).children('.sub-menu').toggleClass('art-active');
+        $(this).children('.sub-menu').toggleClass('active');
       } else {
-        $('.art-menu-bar-btn , .art-menu-bar , .art-info-bar , .art-content , .art-menu-bar-btn , .art-info-bar-btn').removeClass('art-active , art-disabled');
+        $('.menu-bar-btn , .menu-bar , .info-bar , .content , .menu-bar-btn , .info-bar-btn').removeClass('active , disabled');
       }
     });
 

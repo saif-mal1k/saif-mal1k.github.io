@@ -129,7 +129,7 @@ input:focus + .slider {
   --header-banner-gradient: linear-gradient(90deg, rgba(230, 239, 238, 0.9) 15%, rgba(158, 183, 183, 0.594) 50%, rgba(43, 53, 52, 0.587) 100%);
   --picture-frame-gradient: linear-gradient(159deg, rgba(216, 215, 215, 0.98) 0%, rgba(103, 103, 103, 0.98) 100%);
   --card-gradient: linear-gradient(159deg, #aeaeae 0%, #aeaeae 100%);
-    --art-form-field-background: linear-gradient(159deg, #a8a7a7 0%, #535353 100%);
+    --form-field-background: linear-gradient(159deg, #a8a7a7 0%, #535353 100%);
 }
 .theme-dark {
   --color-primary: black; /* #000000 */
@@ -142,7 +142,7 @@ input:focus + .slider {
   --header-banner-gradient: linear-gradient(90deg, rgba(45, 45, 58, 0.9) 15%, rgba(45, 45, 58, 0.7) 50%, rgba(43, 43, 53, 0.7) 100%);
   --picture-frame-gradient: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
   --card-gradient: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
-  --art-form-field-background: linear-gradient(159deg, #252532 0%, #23232d 100%);
+  --form-field-background: linear-gradient(159deg, #252532 0%, #23232d 100%);
 }
 
 
@@ -207,7 +207,7 @@ input:focus + .slider {
         margin: 0 auto;
         margin-bottom: 6px;
         padding: 10px;
-        background: var(--art-form-field-background);
+        background: var(--form-field-background);
         height: 335px;
         width: auto;
         overflow: auto;
@@ -221,7 +221,7 @@ input:focus + .slider {
         width: calc(100% - 60px);
         padding: 10px;
         border: none;
-        background: var(--art-form-field-background);
+        background: var(--form-field-background);
         resize: none;
         color: var(--text-color1);
         border-radius: 5px;
@@ -300,28 +300,169 @@ input:focus + .slider {
     </script>  
 <!-- chat app script -->
 
+    <style>
+
+
+      #experience-timeline {
+        margin: 30px auto 0 auto;
+        position: relative;
+        max-width: 1000px;
+      }
+      #experience-timeline:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 302px;
+        right: auto;
+        height: 100%;
+        width: 4px;
+        background: var(--color-secondary);
+        z-index: 0;
+      }
+      #experience-timeline:after {
+        position: absolute;
+        content: "";
+        width: 4px;
+        height: 35px;
+        background: linear-gradient(to bottom, var(--color-secondary) , rgba(255, 255, 255, 0));
+        top: 100%;
+        left: 302px;
+      }
+
+      .notch {
+        display: block;
+        height: 20px;
+        width: 20px;
+            background: var(--card-gradient);
+  border: inherit;
+        position: absolute;
+        top: 20px;
+        left: -10px;
+        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+        transform: rotate(45deg);
+        border-radius: 0 0 0 0.5em !important;
+
+      }
+
+      .timeline-content {
+        margin-left: 350px;
+        background: var(--card-gradient);
+        padding: 15px;
+        border-radius: 10px;
+        text-align: left;
+      }
+      .timeline-content h3 {
+        font-size: 1.4em;
+        font-weight: 500;
+        color:  var(--text-color1);
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+      .timeline-content h4 {
+        font-size: 1.2em;
+        font-weight: 400;
+        font-style: italic;
+        color: #797979;
+        margin: 0 0 15px 0;
+      }
+      .timeline-content h5 {
+        font-size: 1em;
+        font-weight: 400;
+        font-style: italic;
+        color: #565656;
+        margin-top: -10px;
+        margin-bottom: 15px;
+      }
+      .timeline-content p {
+        color: var(--text-color2);
+        font-size: 0.9em;
+        margin: 0;
+      }
+
+      .timeline-point {
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+      }
+      .timeline-icon {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: var(--progress-bar-background);
+        border-radius: 50% !important;
+        float: left;
+        z-index: 99;
+        margin-left: 283px;
+        margin-top: 6px;
+        box-shadow: 1px 1px 8px 3px #5c5c5c;
+        padding: 2px 4px 4px 4px;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .timeline-date {
+        width: 260px;
+        text-align: right;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        font-weight: 400;
+        color: var(--text-color1);
+      }
+
+      @media only screen and (max-width: 765px) {
+        #experience-timeline:before {
+          top: 18px;
+          left: 25px;
+        }
+        #experience-timeline:after {
+          left: 25px;
+        }
+        .timeline-date {
+          width: auto;
+          text-align: left;
+          position: relative;
+          margin-bottom: 15px;
+          display: block;
+          margin-left: 70px;
+        }
+        .timeline-icon {
+          margin-left: 10px;
+          top: 40px;
+        }
+        .timeline-content {
+          margin-left: 70px;
+        }
+        .notch {
+          top: 20px;
+          left: -10px;
+        }
+      }
+    </style>
+
   </head>
 
   <body>
     <!-- app -->
-    <div class="art-app" style="border-radius: 0px !important;">
+    <div class="app" style="border-radius: 0px !important;">
       <!-- mobile top bar -->
-      <div class="art-mobile-top-bar"></div>
+      <div class="mobile-top-bar"></div>
 
       <!-- app wrapper -->
-      <div class="art-app-wrapper">
+      <div class="app-wrapper">
         <!-- app container end -->
-        <div class="art-app-container">
+        <div class="app-container">
 
           <!-- main content body-->
-          <div class="art-content" style="padding-right: 0px; margin-right: 0px;">
+          <div class="content" style="padding-right: 0px; margin-right: 0px;">
             <!-- curtain -->
-            <div class="art-curtain"></div>
+            <div class="curtain"></div>
 
             <!-- top background -->
-            <div class="art-top-bg" style="background-image: url(img/background2.jpg);">
+            <div class="top-bg" style="background-image: url(img/background2.jpg);">
               <!-- overlay -->
-              <div class="art-top-bg-overlay"></div>
+              <div class="top-bg-overlay"></div>
               <!-- overlay end -->
             </div>
             <!-- top background end -->
@@ -329,7 +470,7 @@ input:focus + .slider {
             <!-- swup container -->
             <div class="transition-fade" id="swup" >
               <!-- scroll frame -->
-              <div id="scrollbar" class="art-scroll-frame">
+              <div id="scrollbar" class="scroll-frame">
                 <!-- container -->
                 <div class="container-fluid">
                   <!-- row -->
@@ -338,14 +479,14 @@ input:focus + .slider {
                     <div class="col-lg-12">
                       <!-- banner -->
                       <div
-                        class="art-a art-banner"
+                        class="a banner"
                       >
 
 
                         <!-- banner overlay -->
-                        <div class="art-banner-overlay">
+                        <div class="banner-overlay">
                           <!-- main title -->
-                          <div class="art-banner-title">
+                          <div class="banner-title">
 
                             <div style="float:right;">
                                 <label id="switch" class="switch">
@@ -391,7 +532,7 @@ input:focus + .slider {
                             </h1>
 
                             <!-- suptitle -->
-                            <div class="art-lg-text art-code mb-25">
+                            <div class="lg-text code mb-25">
                               I'm  
                               <span
                                 style="border-width: 2px; border-radius: 0px !important;"
@@ -426,12 +567,12 @@ input:focus + .slider {
                     <div class="col-md-3 col-6" style="display:none;">
                       <!-- change "col-md-3 col-6" for below three after setting this div to inline -->
                       <!-- couner frame -->
-                      <div class="art-counter-frame">
+                      <div class="counter-frame">
                         <!-- counter -->
-                        <div class="art-counter-box">
+                        <div class="counter-box">
                           <!-- counter number -->
-                          <span class="art-counter">2</span
-                          ><span class="art-counter-plus">+</span>
+                          <span class="counter">2</span
+                          ><span class="counter-plus">+</span>
                         </div>
                         <!-- counter end -->
                         <!-- title -->
@@ -446,12 +587,12 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-md-4 col-6">
                       <!-- couner frame -->
-                      <div class="art-counter-frame">
+                      <div class="counter-frame">
                         <!-- counter -->
-                        <div class="art-counter-box">
+                        <div class="counter-box">
                           <!-- counter number -->
-                          <span class="art-counter">3</span>
-                          <span class="art-counter-plus">+</span>
+                          <span class="counter">3</span>
+                          <span class="counter-plus">+</span>
                         </div>
                         <!-- counter end -->
                         <!-- title -->
@@ -470,12 +611,12 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-md-4 col-6">
                       <!-- couner frame -->
-                      <div class="art-counter-frame">
+                      <div class="counter-frame">
                         <!-- counter -->
-                        <div class="art-counter-box">
+                        <div class="counter-box">
                           <!-- counter number -->
-                          <span class="art-counter">5</span>
-                                                    <span class="art-counter-plus">+</span>
+                          <span class="counter">5</span>
+                                                    <span class="counter-plus">+</span>
 
                         </div>
                         <!-- counter end -->
@@ -491,11 +632,17 @@ input:focus + .slider {
                            <a data-fancybox="gallery" href="img\Certificates\python.pdf">
                             <img class="rounded" src="img\Certificates\python.pdf" />
                           </a>
+                          <a data-fancybox="gallery" href="img\Certificates\SFDC-admin.pdf">
+                            <img class="rounded" src="img\Certificates\SFDC-admin.pdf" />
+                          </a>
                           <a data-fancybox="gallery" href="img\Certificates\cpp.pdf">
                             <img class="rounded" src="img\Certificates\cpp.pdf" />
                           </a>
                             <a data-fancybox="gallery" href="img\Certificates\agile.pdf">
                             <img class="rounded" src="img\Certificates\agile.pdf" />
+                          </a>
+                            <a data-fancybox="gallery" href="img\Certificates\js.pdf">
+                            <img class="rounded" src="img\Certificates\js.pdf" />
                           </a>
                             </div>
                       </div>
@@ -508,12 +655,12 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-md-4 col-6">
                       <!-- couner frame -->
-                      <div class="art-counter-frame">
+                      <div class="counter-frame">
                         <!-- counter -->
-                        <div class="art-counter-box">
+                        <div class="counter-box">
                           <!-- counter number -->
-                          <span class="art-counter">12</span
-                          ><span class="art-counter-plus">+</span>
+                          <span class="counter">12</span
+                          ><span class="counter-plus">+</span>
                         </div>
                         <!-- counter end -->
                         <!-- title -->
@@ -538,9 +685,9 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-lg-12">
                       <!-- section title -->
-                      <div class="art-section-title">
+                      <div class="section-title">
                         <!-- title frame -->
-                        <div class="art-title-frame">
+                        <div class="title-frame">
                           <!-- title -->
                           <h3> What I do 🤵 💻 ?</h3>
                         </div>
@@ -550,13 +697,15 @@ input:focus + .slider {
                     </div>
                     <!-- col end -->
 
-                    <a href="https://github.com/saif-mal1k/web-development/">
+                    <a data-no-swup href="https://github.com/saif-mal1k/web-development/" rel="noopener noreferrer"
+                              target="_blank"
+                              title="Web development notes">
                     <!-- col -->
                     <div class="col-lg-4 col-md-6">
                       <!-- service -->
-                      <div class="art-a card">
+                      <div class="a card hover">
                         <!-- service content -->
-                        <div class="art-service-ib-content">
+                        <div class="service-ib-content">
                           <!-- title -->
                           <h5 class="mb-15">Web Development</h5>
                           <!-- text -->
@@ -564,10 +713,14 @@ input:focus + .slider {
                             "Art that reflect Creativity on Digital Canvas"
                           </div>
                           <!-- button -->
-                          <div class="art-buttons-frame">
+                          <div class="buttons-frame">
                             <a
+                            data-no-swup
                               href="https://github.com/saif-mal1k/web-development/"
-                              class="art-link art-color-link art-w-chevron"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              title="Web Development notes"
+                              class="link color-link w-chevron"
                               >see my notes</a
                             >
                           </div>
@@ -579,13 +732,13 @@ input:focus + .slider {
                     <!-- col end -->
                     </a>
 
-                    <a href="https://github.com/saif-mal1k/Salesforce-Notes">
+                  <a data-no-swup href="https://github.com/saif-mal1k/Salesforce-Notes" rel="noopener noreferrer" target="_blank" title="salesforce notes">
                     <!-- col -->
                     <div class="col-lg-4 col-md-6">
                       <!-- service -->
-                      <div class="art-a card">
+                      <div class="a card hover">
                         <!-- service content -->
-                        <div class="art-service-ib-content">
+                        <div class="service-ib-content">
                           <!-- title -->
                           <h5 class="mb-15">Salesforce Development</h5>
                           <!-- text -->
@@ -593,10 +746,14 @@ input:focus + .slider {
                             "a tool that is capable of connecting the dots between business and intrested customers"
                           </div>
                           <!-- button -->
-                          <div class="art-buttons-frame">
+                          <div class="buttons-frame">
                             <a
+                             data-no-swup
                               href="https://github.com/saif-mal1k/Salesforce-Notes"
-                              class="art-link art-color-link art-w-chevron"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              title="salesforce notes"
+                              class="link color-link w-chevron"
                               >see my notes</a
                             >
                           </div>
@@ -608,13 +765,15 @@ input:focus + .slider {
                     <!-- col end -->
                     </a>
 
-                    <a href="https://github.com/saif-mal1k/programming">  
+                    <a data-no-swup href="https://github.com/saif-mal1k/programming" rel="noopener noreferrer"
+                              target="_blank"
+                              title="programming notes">  
                     <!-- col -->
                     <div class="col-lg-4 col-md-6">
                       <!-- service -->
-                      <div class="art-a card">
+                      <div class="a card hover">
                         <!-- service content -->
-                        <div class="art-service-ib-content">
+                        <div class="service-ib-content">
                           <!-- title -->
                           <h5 class="mb-15">programming</h5>
                           <!-- text -->
@@ -622,10 +781,13 @@ input:focus + .slider {
                             "Mind Game involving puzzles solved through code"
                           </div>
                           <!-- button -->
-                          <div class="art-buttons-frame">
-                            <a
+                          <div class="buttons-frame">
+                            <a data-no-swup
                               href="https://github.com/saif-mal1k/programming"
-                              class="art-link art-color-link art-w-chevron"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              title="programming notes"
+                              class="link color-link w-chevron"
                               >see my notes</a
                             >
                           </div>
@@ -644,6 +806,79 @@ input:focus + .slider {
 
                 <br/>
 
+                <div class="container-fluid">
+                  <!-- row -->
+                  <div class="row p-30-0">
+                    <!-- col -->
+                    <div class="col-lg-12">
+
+                        <!-- title frame -->
+                        <div class="title-frame" >
+                          <!-- title -->
+                          <h3>Experience 💼 	&#38;  Education 🎓</h3>
+                        </div>
+                        <!-- title frame end -->
+
+
+<div id="experience-timeline">
+      
+      <div class="timeline-point">
+        <div class="timeline-icon">💼</div>
+        <div class="timeline-block">
+          <span class="timeline-date">Feb 2022 – &nbsp; present</span>
+          <div class="shadow timeline-content a">
+            <div class="notch"></div>
+
+            <h3>Identity And Access Solutions</h3>
+            <h4>Intern, Salesforce Development</h4>
+            <ul>
+              
+              <li>joined in feb 2022 through college placement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-point">
+        <div class="timeline-icon">🎓</div>
+        <div class="timeline-block">
+          <span class="timeline-date">June 2018 – July 2022</span>
+          <div class="timeline-content a">
+            <div class="notch"></div>
+
+            <h3>Bachelor of Technology</h3>
+            <h4>R.D Engineering College, Ghaziabad</h4>
+            <h5>(Affiliated to Dr. APJ Abdul Kalam Technical University,
+Lucknow formerly known as UPTU)</h5>
+            <ul>
+              <li>
+                studied Information Technology.
+              </li>
+              <li>
+                cleared in 1st Division with <b>7.4 CGPA</b>.
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+                    </div>
+                    <!-- col end -->
+                  </div>
+                  <!-- row end -->
+                </div>
+                <!-- container end -->
+
+
+
+
+                <br/>
+
+
+                <br/>
+
                 <!-- my portfolio container -->
                 <div class="container-fluid">
                   <!-- row -->
@@ -651,9 +886,9 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-lg-12">
                       <!-- section title -->
-                      <div class="art-section-title">
+                      <div class="section-title">
                         <!-- title frame -->
-                        <div class="art-title-frame" >
+                        <div class="title-frame" >
                           <!-- title -->
                           <h3>Projects I've done 🎨 :</h3>
                         </div>
@@ -666,26 +901,26 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-lg-12">
                       <!-- filter -->
-                      <div class="art-filter mb-30">
+                      <div class="filter mb-30">
                         <!-- filter link -->
-                        <a href="#" data-filter="*" class="art-link art-current"
-                          >All Categories</a
+                        <a href="#" data-filter="*" class="link current"
+                          >All Projects</a
                         >
 
                         <!-- filter link -->
-                        <a href="#" data-filter=".DesktopApplication" class="art-link"
+                        <a href="#" data-filter=".DesktopApplication" class="link"
                           >Desktop Application</a
                         >
                         <!-- filter link -->
-                        <a href="#" data-filter=".SalesforceApp" class="art-link"
+                        <a href="#" data-filter=".SalesforceApp" class="link"
                           >Salesforce app</a
                         >
                         <!-- filter link -->
-                        <a href="#" data-filter=".WebDevelopment" class="art-link"
+                        <a href="#" data-filter=".WebDevelopment" class="link"
                           >Web Development</a
                         >
                         <!-- filter link -->
-                        <a href="#" data-filter=".WebAutomation" class="art-link"
+                        <a href="#" data-filter=".WebAutomation" class="link"
                           >Web automation</a
                         >
 
@@ -694,28 +929,31 @@ input:focus + .slider {
                     </div>
                     <!-- col end -->
 
-                    <div class="art-grid art-grid-2-col art-gallery">
+                    <div class="grid grid-2-col gallery">
                       <!-- grid item -->
-                      <div class="art-grid-item DesktopApplication">
+                      <div class="grid-item DesktopApplication">
                         <!-- grid item frame -->
                         <a
                           data-fancybox="diplome"
                           data-no-swup
                           href="img/works/thumbnail/virtual-assistant.png"
-                          class="art-a art-portfolio-item-frame art-horizontal"
+                          class="a portfolio-item-frame horizontal"
                         >
                           <!-- img -->
                           <img src="img/works/thumbnail/virtual-assistant.png" alt="item" />
                           <!-- zoom icon -->
-                          <!--<span class="art-item-hover"
+                          <!--<span class="item-hover"
                             ><i class="fas fa-expand"></i
                           ></span>-->
                         </a>
                         <!-- grid item frame end -->
                         <!-- description -->
-                        <div class="art-item-description" style="padding: 0px;">
+                        <div class="item-description" style="padding: 0px;">
 
-                          <a href="https://www.github.com/virtual-assistant" title="click to view on Github">
+                          <a data-no-swup
+                          rel="noopener noreferrer"
+                          target="_blank"
+                           href="https://www.github.com/saif-mal1k/virtual-assistant" title="click to view on Github">
                             <img src="https://github-readme-stats.vercel.app/api/pin/?username=saif-mal1k&amp;repo=virtual-assistant&amp;bg_color=2d2d38&amp;hide_border=true&amp;title_color=05FFFF&amp;text_color=8C8C8E&amp;icon_color=05ffff" width="100%">
                           </a>
                         </div>
@@ -726,24 +964,24 @@ input:focus + .slider {
 
                       
                       <!-- grid item -->
-                      <div class="art-grid-item SalesforceApp">
+                      <div class="grid-item SalesforceApp">
                         <!-- grid item frame -->
                         <a
                           data-fancybox="diplome"
                           data-no-swup
                           href="img/works/thumbnail/salesforce.png"
-                          class="art-a art-portfolio-item-frame art-horizontal"
+                          class="a portfolio-item-frame horizontal"
                         >
                           <!-- img -->
                           <img src="img/works/thumbnail/salesforce.png" alt="item" />
                           <!-- zoom icon -->
-                          <!--<span class="art-item-hover"
+                          <!--<span class="item-hover"
                             ><i class="fas fa-expand"></i
                           ></span>-->
                         </a>
                         <!-- grid item frame end -->
                         <!-- description -->
-                        <div class="art-item-description">
+                        <div class="item-description">
                           <!-- title -->
                           <h5 class="mb-15">Mileage Tracker Application</h5>
                           <div class="mb-15">
@@ -752,7 +990,7 @@ input:focus + .slider {
                           <!-- button -->
                           <a
                             href="#"
-                            class="art-link art-color-link art-w-chevron"
+                            class="link color-link w-chevron"
                             >Read more</a
                           >
                         </div>
@@ -762,24 +1000,24 @@ input:focus + .slider {
 
 
                       <!-- grid item -->
-                      <div class="art-grid-item WebDevelopment">
+                      <div class="grid-item WebDevelopment">
                         <!-- grid item frame -->
                         <a
                           data-fancybox="diplome"
                           data-no-swup
                           href="img/works/thumbnail/portfolio.png"
-                          class="art-a art-portfolio-item-frame art-horizontal"
+                          class="a portfolio-item-frame horizontal"
                         >
                           <!-- img -->
                           <img src="img/works/thumbnail/portfolio.png" alt="item" />
                           <!-- zoom icon -->
-                          <!--<span class="art-item-hover"
+                          <!--<span class="item-hover"
                             ><i class="fas fa-expand"></i
                           ></span>-->
                         </a>
                         <!-- grid item frame end -->
                         <!-- description -->
-                        <div class="art-item-description">
+                        <div class="item-description">
                           <!-- title -->
                           <h5 class="mb-15">portfolio website</h5>
                           <div class="mb-15">
@@ -788,7 +1026,7 @@ input:focus + .slider {
                           <!-- button -->
                           <a
                             href="https://saifmalik.engineer"
-                            class="art-link art-color-link art-w-chevron"
+                            class="link color-link w-chevron"
                             >Read more</a
                           >
                         </div>
@@ -797,24 +1035,24 @@ input:focus + .slider {
                       <!-- grid item end -->
 
                                             <!-- grid item -->
-                      <div class="art-grid-item WebAutomation">
+                      <div class="grid-item WebAutomation">
                         <!-- grid item frame -->
                         <a
                           data-fancybox="diplome"
                           data-no-swup
                           href="img/works/thumbnail/automation.png"
-                          class="art-a art-portfolio-item-frame art-horizontal"
+                          class="a portfolio-item-frame horizontal"
                         >
                           <!-- img -->
                           <img src="img/works/thumbnail/automation.png" alt="item" />
                           <!-- zoom icon -->
-                          <!--<span class="art-item-hover"
+                          <!--<span class="item-hover"
                             ><i class="fas fa-expand"></i
                           ></span>-->
                         </a>
                         <!-- grid item frame end -->
                         <!-- description -->
-                        <div class="art-item-description">
+                        <div class="item-description">
                           <!-- title -->
                           <h5 class="mb-15">Web Automation</h5>
                           <div class="mb-15">
@@ -823,7 +1061,7 @@ input:focus + .slider {
                           <!-- button -->
                           <a
                             href="#"
-                            class="art-link art-color-link art-w-chevron"
+                            class="link color-link w-chevron"
                             >Read more</a
                           >
                         </div>
@@ -834,6 +1072,26 @@ input:focus + .slider {
                     </div>
                   </div>
                   <!-- row end -->
+
+                  <!--script to follow mobile ui if device is mobile-->
+                  <script>
+
+                    var isMobile = false; //initiate as false
+// device detection
+if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+    isMobile = true;
+}
+
+                  if(isMobile){
+
+                    
+
+
+                  }
+
+                  </script>
+
                 </div>
                 <!-- container end -->
 
@@ -848,9 +1106,9 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-lg-12">
                       <!-- section title -->
-                      <div class="art-section-title">
+                      <div class="section-title">
                         <!-- title frame -->
-                        <div class="art-title-frame">
+                        <div class="title-frame">
                           <!-- title -->
                           <h3>Recommendations 👍</h3>
                         </div>
@@ -864,7 +1122,7 @@ input:focus + .slider {
                     <div class="col-lg-12">
                       <!-- slider container -->
                       <div
-                        class="swiper-container art-testimonial-slider"
+                        class="swiper-container testimonial-slider"
                         style="overflow: visible"
                       >
                         <!-- slider wrapper -->
@@ -872,14 +1130,14 @@ input:focus + .slider {
                           <!-- slide -->
                           <div class="swiper-slide" >
                             <!-- testimonial -->
-                            <div class="art-a art-testimonial" >
+                            <div class="a testimonial" >
                               <!-- testimonial body -->
                               <div class="testimonial-body">
                                 <a  href="#">
                                 <!-- photo -->
                                 <img
                                   data-no-swup
-                                  class="art-testimonial-face"
+                                  class="testimonial-face"
                                   src="https://trailblazer.me/profilephoto/7298W000001qOSW/M"
                                   alt="face"
                                   style="border-radius: 50% !important;"
@@ -887,7 +1145,7 @@ input:focus + .slider {
                                 </a>
                                 <!-- name -->
                                 <h5>Sumit Parcha</h5>
-                                <div class="art-el-suptitle mb-15">
+                                <div class="el-suptitle mb-15">
                                   Designation
                                 </div>
                                 <!-- text -->
@@ -897,10 +1155,10 @@ input:focus + .slider {
                               </div>
                               <!-- testimonial body end -->
                               <!-- testimonial footer -->
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
+                              <div class="testimonial-footer">
+                                <div class="left-side">
                                   <!-- star rate -->
-                                  <ul class="art-star-rate">
+                                  <ul class="star-rate">
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
@@ -909,7 +1167,7 @@ input:focus + .slider {
                                   </ul>
                                   <!-- star rate end -->
                                 </div>
-                                <div class="art-right-side"></div>
+                                <div class="right-side"></div>
                               </div>
                               <!-- testimonial footer end -->
                             </div>
@@ -920,13 +1178,13 @@ input:focus + .slider {
                           <!-- slide -->
                           <div class="swiper-slide">
                             <!-- testimonial -->
-                            <div class="art-a art-testimonial">
+                            <div class="a testimonial">
                               <!-- testimonial body -->
                               <div class="testimonial-body">
                                 <a href="#">
                                 <!-- photo -->
                                 <img
-                                  class="art-testimonial-face"
+                                  class="testimonial-face"
                                   src="https://trailblazer.me/profilephoto/7298W000001rY6D/M"
                                   alt="face"
                                   style="border-radius: 50% !important;"
@@ -934,7 +1192,7 @@ input:focus + .slider {
                                 </a>
                                 <!-- name -->
                                 <h5>Nishant Singh</h5>
-                                <div class="art-el-suptitle mb-15">
+                                <div class="el-suptitle mb-15">
                                   Designation
                                 </div>
                                 <!-- text -->
@@ -944,10 +1202,10 @@ input:focus + .slider {
                               </div>
                               <!-- testimonial body end -->
                               <!-- testimonial footer -->
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
+                              <div class="testimonial-footer">
+                                <div class="left-side">
                                   <!-- star rate -->
-                                  <ul class="art-star-rate">
+                                  <ul class="star-rate">
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
@@ -956,7 +1214,7 @@ input:focus + .slider {
                                   </ul>
                                   <!-- star rate end -->
                                 </div>
-                                <div class="art-right-side"></div>
+                                <div class="right-side"></div>
                               </div>
                               <!-- testimonial footer end -->
                             </div>
@@ -967,13 +1225,13 @@ input:focus + .slider {
                           <!-- slide -->
                           <div class="swiper-slide">
                             <!-- testimonial -->
-                            <div class="art-a art-testimonial">
+                            <div class="a testimonial">
                               <!-- testimonial body -->
                               <div class="testimonial-body">
                                 <!-- photo -->
                                 <a href="#">
                                 <img
-                                  class="art-testimonial-face"
+                                  class="testimonial-face"
                                   src="https://trailblazer.me/profilephoto/7298W000001mBuZ/M"
                                   alt="face"
                                   style="border-radius: 50% !important;"
@@ -981,7 +1239,7 @@ input:focus + .slider {
                                 </a>
                                 <!-- name -->
                                 <h5>Rahul Chaudhary</h5>
-                                <div class="art-el-suptitle mb-15">
+                                <div class="el-suptitle mb-15">
                                   Designation
                                 </div>
                                 <!-- text -->
@@ -991,10 +1249,10 @@ input:focus + .slider {
                               </div>
                               <!-- testimonial body end -->
                               <!-- testimonial footer -->
-                              <div class="art-testimonial-footer">
-                                <div class="art-left-side">
+                              <div class="testimonial-footer">
+                                <div class="left-side">
                                   <!-- star rate -->
-                                  <ul class="art-star-rate">
+                                  <ul class="star-rate">
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
                                     <li><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="15" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 0 1.839844 L 75 1.839844 L 75 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath><clipPath id="id2"><path d="M 0 1.839844 L 61 1.839844 L 61 73.089844 L 0 73.089844 Z M 0 1.839844 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#f5c116" d="M 37.492188 1.839844 L 49.566406 25.988281 L 74.984375 29.054688 L 57.035156 48.945312 L 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 " fill-opacity="1" fill-rule="nonzero"/></g><g clip-path="url(#id2)"><path fill="#d2a113" d="M 60.660156 73.09375 L 37.492188 63.132812 L 14.320312 73.09375 L 17.945312 48.945312 L 0 29.054688 L 25.410156 25.988281 L 37.492188 1.839844 C 37.492188 1.839844 32.824219 19.402344 31.441406 22.894531 C 30.191406 26.050781 29.816406 28.578125 26.648438 29.488281 C 25.625 29.78125 24.492188 29.839844 23.324219 29.839844 C 22.929688 29.839844 22.53125 29.835938 22.132812 29.828125 C 21.734375 29.820312 21.332031 29.8125 20.933594 29.8125 C 18.332031 29.8125 15.828125 30.105469 14.265625 32.601562 C 12.128906 36.019531 14.246094 38.890625 16.988281 41.082031 C 19.742188 43.285156 22.957031 44.695312 23.804688 47.589844 C 24.726562 50.738281 20.683594 55.585938 22.132812 58.578125 C 23.25 60.886719 25.570312 62.367188 28.121094 62.367188 C 29.386719 62.367188 30.707031 62.003906 31.964844 61.191406 C 33.667969 60.097656 35.128906 59.050781 36.960938 59.050781 C 38.28125 59.050781 39.796875 59.597656 41.734375 61.0625 C 44.25 62.960938 46.667969 64.640625 48.332031 65.324219 C 49.40625 65.761719 50.320312 65.957031 51.109375 65.957031 C 52.914062 65.957031 54.082031 64.941406 55.132812 63.535156 C 57.203125 60.773438 57.816406 55.976562 57.609375 52.789062 L 60.660156 73.09375 " fill-opacity="1" fill-rule="nonzero"/></g></svg></li>
@@ -1003,7 +1261,7 @@ input:focus + .slider {
                                   </ul>
                                   <!-- star rate end -->
                                 </div>
-                                <div class="art-right-side"></div>
+                                <div class="right-side"></div>
                               </div>
                               <!-- testimonial footer end -->
                             </div>
@@ -1021,24 +1279,24 @@ input:focus + .slider {
                     <!-- col -->
                     <div class="col-lg-12">
                       <!-- slider navigation -->
-                      <div class="art-slider-navigation">
+                      <div class="slider-navigation">
                         <!-- left side -->
-                        <div class="art-sn-left">
+                        <div class="sn-left">
                           <!-- slider pagination -->
                           <div class="swiper-pagination"></div>
                         </div>
                         <!-- left side end -->
 
                         <!-- right side -->
-                        <div class="art-sn-right">
+                        <div class="sn-right">
                           <!-- slider navigation -->
-                          <div class="art-slider-nav-frame">
+                          <div class="slider-nav-frame">
                             <!-- prev button -->
-                            <div class="art-slider-nav art-testi-swiper-prev" >
+                            <div class="slider-nav testi-swiper-prev" >
                               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="20px" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 22 1 L 65.078125 1 L 65.078125 73.714844 L 22 73.714844 Z M 22 1 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 60.625 2.222656 C 59.972656 1.953125 59.300781 1.78125 58.597656 1.714844 C 57.898438 1.644531 57.207031 1.679688 56.515625 1.816406 C 55.824219 1.953125 55.171875 2.1875 54.550781 2.523438 C 53.929688 2.855469 53.371094 3.269531 52.875 3.769531 L 24.445312 32.300781 C 24.113281 32.628906 23.820312 32.992188 23.5625 33.378906 C 23.300781 33.769531 23.082031 34.179688 22.902344 34.613281 C 22.726562 35.046875 22.589844 35.492188 22.5 35.949219 C 22.410156 36.410156 22.363281 36.875 22.363281 37.339844 C 22.363281 37.808594 22.410156 38.273438 22.5 38.734375 C 22.589844 39.191406 22.726562 39.636719 22.902344 40.070312 C 23.082031 40.503906 23.300781 40.914062 23.5625 41.304688 C 23.820312 41.691406 24.113281 42.054688 24.445312 42.382812 L 52.875 70.914062 C 53.371094 71.414062 53.929688 71.828125 54.550781 72.160156 C 55.171875 72.492188 55.824219 72.726562 56.515625 72.863281 C 57.203125 73.003906 57.898438 73.035156 58.597656 72.96875 C 59.296875 72.898438 59.972656 72.730469 60.621094 72.460938 C 61.269531 72.1875 61.867188 71.832031 62.410156 71.382812 C 62.953125 70.933594 63.421875 70.417969 63.8125 69.832031 C 64.203125 69.246094 64.5 68.617188 64.703125 67.941406 C 64.90625 67.265625 65.007812 66.574219 65.007812 65.871094 L 65.007812 8.8125 C 65.007812 8.105469 64.90625 7.417969 64.703125 6.742188 C 64.5 6.066406 64.203125 5.4375 63.8125 4.851562 C 63.421875 4.261719 62.957031 3.746094 62.410156 3.296875 C 61.867188 2.851562 61.273438 2.492188 60.625 2.222656 Z M 60.625 2.222656 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
                             </div>
                             <!-- next button -->
-                            <div class="art-slider-nav art-testi-swiper-next">
+                            <div class="slider-nav testi-swiper-next">
                               <svg style="display: inline;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="20px" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 7.628906 1.105469 L 51 1.105469 L 51 73.855469 L 7.628906 73.855469 Z M 7.628906 1.105469 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 12.085938 72.601562 C 12.734375 72.871094 13.410156 73.039062 14.109375 73.109375 C 14.808594 73.175781 15.503906 73.144531 16.191406 73.003906 C 16.882812 72.867188 17.539062 72.632812 18.15625 72.300781 C 18.777344 71.96875 19.335938 71.550781 19.832031 71.050781 L 48.265625 42.523438 C 48.59375 42.191406 48.890625 41.832031 49.148438 41.441406 C 49.40625 41.050781 49.625 40.640625 49.804688 40.207031 C 49.984375 39.777344 50.117188 39.332031 50.210938 38.871094 C 50.300781 38.410156 50.34375 37.949219 50.34375 37.480469 C 50.34375 37.011719 50.300781 36.546875 50.210938 36.089844 C 50.117188 35.628906 49.984375 35.183594 49.804688 34.75 C 49.625 34.320312 49.40625 33.90625 49.148438 33.519531 C 48.890625 33.128906 48.59375 32.769531 48.265625 32.4375 L 19.832031 3.90625 C 19.335938 3.410156 18.777344 2.992188 18.15625 2.660156 C 17.539062 2.328125 16.882812 2.09375 16.195312 1.957031 C 15.503906 1.820312 14.808594 1.785156 14.109375 1.855469 C 13.410156 1.921875 12.738281 2.09375 12.089844 2.363281 C 11.4375 2.632812 10.84375 2.992188 10.296875 3.4375 C 9.753906 3.886719 9.289062 4.402344 8.898438 4.988281 C 8.507812 5.574219 8.210938 6.207031 8.007812 6.882812 C 7.800781 7.554688 7.699219 8.246094 7.699219 8.949219 L 7.699219 66.007812 C 7.699219 66.714844 7.800781 67.40625 8.003906 68.078125 C 8.210938 68.753906 8.507812 69.386719 8.898438 69.972656 C 9.285156 70.558594 9.753906 71.074219 10.296875 71.523438 C 10.839844 71.96875 11.4375 72.328125 12.085938 72.601562 Z M 12.085938 72.601562 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
                             </div>
                           </div>
@@ -1068,9 +1326,9 @@ input:focus + .slider {
                   <div class="col-lg-12">
 
                     <!-- section title -->
-                    <div class="art-section-title">
+                    <div class="section-title">
                       <!-- title frame -->
-                      <div class="art-title-frame">
+                      <div class="title-frame">
                         <!-- title -->
                         <h3>Contact information 👋</h3>
                       </div>
@@ -1083,8 +1341,8 @@ input:focus + .slider {
                   <!-- col -->
                   <div class="col-lg-5">
                     <!-- contact card -->
-                    <div class="art-a art-card">
-                      <div class="art-table p-15-15">
+                    <div class="a card">
+                      <div class="table p-15-15">
                         <ul>
 
                           <li>
@@ -1103,8 +1361,8 @@ input:focus + .slider {
                   <!-- col -->
                   <div class="col-lg-7">
                     <!-- contact card -->
-                    <div class="art-a art-card">
-                      <div class="art-table p-15-15">
+                    <div class="a card">
+                      <div class="table p-15-15">
                         <ul>
                           <li>
                             <h6>Email:</h6><span>saifmalik3300@gmail.com</span>
@@ -1125,9 +1383,9 @@ input:focus + .slider {
                   <div class="col-lg-8">
 
                     <!-- section title -->
-                    <div class="art-section-title">
+                    <div class="section-title">
                       <!-- title frame -->
-                      <div class="art-title-frame">
+                      <div class="title-frame">
                         <!-- title -->
                         <h4>Send message</h4>
                       </div>
@@ -1136,7 +1394,7 @@ input:focus + .slider {
                     <!-- section title end -->
 
                     <!-- contact form frame -->
-                    <div class="art-a art-card">
+                    <div class="a card">
 
                       <script>
                         function confirmFormSuccess() {
@@ -1167,7 +1425,7 @@ input:focus + .slider {
 
                       </script>
                       <!-- contact form -->
-                      <form id="form" action="https://formsubmit.co/cbcdd800e453d432c8f8f5a837d9947f" method="POST" class="art-contact-form" onsubmit="confirmFormSuccess();">
+                      <form id="form" action="https://formsubmit.co/cbcdd800e453d432c8f8f5a837d9947f" method="POST" class="contact-form" onsubmit="confirmFormSuccess();">
                         
                         <input type="hidden" name="_subject" value="Someone msg from your website!">
 
@@ -1176,33 +1434,33 @@ input:focus + .slider {
                         <input type="hidden" name="_captcha" value="false">
 
                         <!-- form field -->
-                        <div class="art-form-field">
+                        <div class="form-field">
                           <!-- name input -->
-                          <input id="name" name="name" class="art-input" type="text" placeholder="Your Name" required autocomplete="off">
+                          <input id="name" name="name" class="input" type="text" placeholder="Your Name" required autocomplete="off">
                           <!-- label -->
                           <label for="name"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" version="1.0"><path fill="#000000" d="M 37.5 0 C 27.140625 0 18.75 8.390625 18.75 18.75 C 18.75 29.085938 27.140625 37.5 37.5 37.5 C 47.859375 37.5 56.25 29.085938 56.25 18.75 C 56.25 8.390625 47.859375 0 37.5 0 Z M 37.5 46.875 C 25.007812 46.875 0 53.132812 0 65.625 L 0 75 L 75 75 L 75 65.625 C 75 53.132812 49.992188 46.875 37.5 46.875 Z M 37.5 46.875 " fill-opacity="1" fill-rule="nonzero"/></svg></i></label>
                         </div>
                         <!-- form field end -->
                         <!-- form field -->
-                        <div class="art-form-field">
+                        <div class="form-field">
                           <!-- email input -->
-                          <input id="email" name="email" class="art-input" type="email" placeholder="Your Email" required>
+                          <input id="email" name="email" class="input" type="email" placeholder="Your Email" required>
                           <!-- label -->
                           <label for="email"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><path fill="#000000" d="M 44.761719 26.632812 C 43.898438 26.414062 42.71875 26.199219 41.429688 26.199219 C 34.335938 26.199219 28.75 33.203125 28.75 41.503906 C 28.75 45.59375 30.578125 48.183594 34.121094 48.183594 C 38.097656 48.183594 42.289062 43.117188 43.25 36.871094 Z M 54.324219 71.132812 C 47.875 74.039062 42.289062 75.011719 34.554688 75.011719 C 16.710938 75.011719 1.023438 62.1875 1.023438 41.070312 C 1.023438 19.089844 17.035156 0.0195312 41.214844 0.0195312 C 60.234375 0.0195312 73.773438 13.054688 73.773438 31.160156 C 73.773438 46.996094 64.960938 56.910156 53.359375 56.910156 C 48.304688 56.910156 44.652344 54.214844 44.117188 48.613281 L 43.898438 48.613281 C 40.460938 54 35.734375 56.910156 29.933594 56.910156 C 23.050781 56.910156 17.898438 51.628906 17.898438 42.792969 C 17.898438 29.542969 27.675781 17.6875 43.148438 17.6875 C 47.875 17.6875 53.246094 18.871094 55.933594 20.273438 L 52.710938 40.320312 C 51.636719 46.671875 52.386719 49.582031 55.394531 49.691406 C 60.015625 49.902344 65.820312 43.980469 65.820312 31.480469 C 65.820312 17.367188 56.796875 6.59375 40.136719 6.59375 C 23.589844 6.59375 9.300781 19.410156 9.300781 40.101562 C 9.300781 58.203125 20.691406 68.328125 36.699219 68.328125 C 42.179688 68.328125 48.09375 67.144531 52.386719 64.992188 L 54.324219 71.132812 " fill-opacity="1" fill-rule="nonzero"/></svg></label>
                           
                         </div>
                         <!-- form field end -->
                         <!-- form field -->
-                        <div class="art-form-field">
+                        <div class="form-field">
                           <!-- message textarea -->
-                          <textarea id="message" name="message" class="art-input" placeholder="Message" required></textarea>
+                          <textarea id="message" name="message" class="input" placeholder="Message" required></textarea>
                           <!-- label -->
                           <label for="message"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" width="20" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><path fill="#000000" d="M 17.042969 70.5 C 16.65625 70.5 16.261719 70.414062 15.898438 70.238281 C 14.976562 69.800781 14.394531 68.886719 14.394531 67.875 L 14.394531 60 C 9.816406 60 1.152344 57.257812 1.152344 46.875 L 1.152344 20.625 C 1.152344 16.085938 3.921875 7.5 14.394531 7.5 L 62.074219 7.5 C 66.652344 7.5 75.316406 10.242188 75.316406 20.625 L 75.316406 46.875 C 75.316406 51.414062 73.101562 60 64.722656 60 L 31.21875 60 L 18.699219 69.925781 C 18.21875 70.304688 17.636719 70.5 17.042969 70.5 Z M 17.042969 54.75 C 18.507812 54.75 19.691406 55.921875 19.691406 57.375 L 19.691406 62.414062 L 28.632812 55.324219 C 29.105469 54.953125 29.6875 54.75 30.289062 54.75 L 64.722656 54.75 C 69.910156 54.75 70.015625 47.1875 70.019531 46.867188 L 70.019531 20.625 C 70.019531 13.214844 63.386719 12.765625 62.054688 12.75 L 14.394531 12.75 C 6.917969 12.75 6.464844 19.320312 6.449219 20.636719 L 6.449219 46.875 C 6.449219 54.285156 13.078125 54.734375 14.410156 54.75 Z M 43.53125 33.75 C 43.53125 30.847656 41.160156 28.5 38.234375 28.5 C 35.308594 28.5 32.9375 30.847656 32.9375 33.75 C 32.9375 36.652344 35.308594 39 38.234375 39 C 41.160156 39 43.53125 36.652344 43.53125 33.75 Z M 27.640625 33.75 C 27.640625 30.847656 25.269531 28.5 22.339844 28.5 C 19.414062 28.5 17.042969 30.847656 17.042969 33.75 C 17.042969 36.652344 19.414062 39 22.339844 39 C 25.269531 39 27.640625 36.652344 27.640625 33.75 Z M 59.421875 33.75 C 59.421875 30.847656 57.054688 28.5 54.125 28.5 C 51.199219 28.5 48.828125 30.847656 48.828125 33.75 C 48.828125 36.652344 51.199219 39 54.125 39 C 57.054688 39 59.421875 36.652344 59.421875 33.75 Z M 59.421875 33.75 " fill-opacity="1" fill-rule="nonzero"/></svg></label>
                         </div>
                         <!-- form field end -->
                         <!-- button -->
-                        <div class="art-submit-frame">
-                          <button class="art-btn art-btn-md art-submit" type="submit"><span>Send message</span></button>
+                        <div class="submit-frame">
+                          <button class="btn btn-md submit" type="submit"><span>Send message</span></button>
                           
                           <!-- status -->
                           <div id="form-status" style="display:none; float: right; margin-right:89px;">
@@ -1212,7 +1470,7 @@ input:focus + .slider {
                           
                           <!-- success -->
                           <div id="form-success" style="display:none; float: right;">
-                            Successfully Sent <input class="art-btn art-btn-md" onclick="resetForm()" type="button" value="Ok"></input>
+                            Successfully Sent <input class="btn btn-md" onclick="resetForm()" type="button" value="Ok"></input>
                           </div>
 
                           <script>
@@ -1247,9 +1505,9 @@ input:focus + .slider {
                   <div class="col-lg-4">
 
                     <!-- section title -->
-                    <div class="art-section-title">
+                    <div class="section-title">
                       <!-- title frame -->
-                      <div class="art-title-frame">
+                      <div class="title-frame">
                         <!-- title -->
                         <h4>Chat box</h4>
                       </div>
@@ -1307,7 +1565,7 @@ input:focus + .slider {
 
     </script>
     <!-- chat box area -->
-    <div id="wrapper" class="art-a art-card" >
+    <div id="wrapper" class="a card hover" >
       <div id="login-box" class="align-center" style="display: block; text-align: center; padding: 35px;">
         <button
           type="submit"
@@ -1338,7 +1596,7 @@ input:focus + .slider {
             autocomplete="off"
             onclick="scrollChat();"
           />
-          <input type="submit" class="art-btn art-btn-md art-submit send-msg-btn" value="SEND" />
+          <input type="submit" class="btn btn-md submit send-msg-btn" value="SEND" />
         </form>
         <!-- <ul id="messages"></ul> -->
       </div>
@@ -1453,13 +1711,13 @@ input:focus + .slider {
 
           <!-- skills, languages, social media links  -->
           <!-- info bar -->
-          <div class="art-info-bar">
+          <div class="info-bar">
             <!-- menu bar frame -->
-            <div class="art-info-bar-frame">
+            <div class="info-bar-frame">
               <!-- info bar header -->
-              <div class="art-info-bar-header">
+              <div class="info-bar-header">
                 <!-- info bar button -->
-                <div class="art-info-bar-btn">
+                <div class="info-bar-btn">
                   <!-- icon -->
                   
                   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="30" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 2 10.03125 L 73 10.03125 L 73 64.78125 L 2 64.78125 Z M 2 10.03125 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="#12fafa" d="M 65.09375 44.871094 L 27.636719 44.871094 C 17.980469 44.871094 17.976562 29.941406 27.636719 29.941406 L 65.09375 29.941406 C 74.746094 29.941406 74.75 44.871094 65.09375 44.871094 Z M 65.09375 49.847656 L 27.636719 49.847656 C 17.976562 49.847656 17.980469 64.78125 27.636719 64.78125 L 65.09375 64.78125 C 74.75 64.78125 74.746094 49.847656 65.09375 49.847656 Z M 10.15625 10.03125 C 0.167969 10.03125 0.167969 24.964844 10.15625 24.964844 C 20.144531 24.964844 20.144531 10.03125 10.15625 10.03125 Z M 10.15625 29.941406 C 0.167969 29.941406 0.167969 44.871094 10.15625 44.871094 C 20.144531 44.871094 20.144531 29.941406 10.15625 29.941406 Z M 10.15625 49.847656 C 0.167969 49.847656 0.167969 64.78125 10.15625 64.78125 C 20.144531 64.78125 20.144531 49.847656 10.15625 49.847656 Z M 27.636719 24.964844 L 65.09375 24.964844 C 74.75 24.964844 74.746094 10.03125 65.09375 10.03125 L 27.636719 10.03125 C 17.976562 10.03125 17.980469 24.964844 27.636719 24.964844 Z M 27.636719 24.964844 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
@@ -1470,20 +1728,20 @@ input:focus + .slider {
               <!-- info bar header end -->
 
               <!-- info bar header -->
-              <div class="art-header">
+              <div class="header">
                 <!-- avatar -->
-                <div class="art-avatar">
+                <div class="avatar">
                   <a
                     data-no-swup
                     href="#"
-                    class="art-avatar-curtain"
+                    class="avatar-curtain"
                   >
                     <img src="https://avatars.githubusercontent.com/u/63545175?v=4" alt="my picture" />
                   </a>
                   <!-- available -->
-                  <div class="art-lamp-light">
-                    <!-- add class 'art-not-available' if not available-->
-                    <div class="art-available-lamp"><img width="24px"  src="https://static.wixstatic.com/media/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png/v1/fill/w_676,h_673,al_c/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png"></div>
+                  <div class="lamp-light">
+                    <!-- add class 'not-available' if not available-->
+                    <div class="available-lamp"><img width="24px" src="https://static.wixstatic.com/media/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png/v1/fill/w_676,h_673,al_c/d98092_967d2f1b524e423c8c5c5644ea740e8e~mv2.png"></div>
                   </div>
                 </div>
                 <!-- avatar end -->
@@ -1492,14 +1750,14 @@ input:focus + .slider {
               <!-- info bar header end -->
 
               <!-- scroll frame -->
-              <div id="scrollbar2" class="art-scroll-frame">
+              <div id="scrollbar2" class="scroll-frame">
                 <!-- info bar about -->
-                <div class="art-table p-15-15">
+                <div class="table p-15-15">
                   <!-- about text -->
                   <ul>
                     <!-- Name -->
                     <li>
-                      <h6>My Name:</h6>
+                      <h6>Name:</h6>
                       <span>Saif Malik</span>
                     </li>
                     <!-- age -->
@@ -1523,35 +1781,35 @@ input:focus + .slider {
                 <!-- info bar about end -->
 
                 <!-- divider -->
-                <div class="art-ls-divider"></div>
+                <div class="ls-divider"></div>
 
                 <br/>
 
                   <h5>Languages known:</h5>
 
                 <!-- language skills -->
-                <div class="art-lang-skills p-30-15">
+                <div class="lang-skills p-30-15">
                 
                   
                   <!-- skill -->
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog1" class="art-cirkle-progress"></div>
+                  <div class="lang-skills-item">
+                    <div id="circleprog1" class="cirkle-progress"></div>
                     <!-- title -->
                     <h6>Hindi</h6>
                   </div>
                   <!-- skill end -->
 
                   <!-- skill -->
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog2" class="art-cirkle-progress"></div>
+                  <div class="lang-skills-item">
+                    <div id="circleprog2" class="cirkle-progress"></div>
                     <!-- title -->
                     <h6>English</h6>
                   </div>
                   <!-- skill end -->
 
                   <!-- skill -->
-                  <div class="art-lang-skills-item">
-                    <div id="circleprog3" class="art-cirkle-progress"></div>
+                  <div class="lang-skills-item">
+                    <div id="circleprog3" class="cirkle-progress"></div>
                     <!-- title -->
                     <h6>German</h6>
                   </div>
@@ -1560,22 +1818,22 @@ input:focus + .slider {
                 <!-- language skills end -->
 
                 <!-- divider -->
-                <div class="art-ls-divider"></div>
+                <div class="ls-divider"></div>
 
                 <!-- hard skills -->
-                <div class="art-hard-skills p-30-15" >
+                <div class="hard-skills p-30-15" >
                   <h5>Web Development:</h5>
 
                   <br/>
 
                   <!-- skill -->
-                  <div class="art-hard-skills-item" style="margin-left: 8px;">
-                    <div class="art-skill-heading">
+                  <div class="hard-skills-item" style="margin-left: 8px;">
+                    <div class="skill-heading">
                       <!-- title -->
                       <h6 >html</h6>
                     </div>
                     <!-- progressbar frame -->
-                    <div class="art-line-progress">
+                    <div class="line-progress">
                       <!-- progressbar -->
                       <div id="lineprog1"></div>
                     </div>
@@ -1584,13 +1842,13 @@ input:focus + .slider {
                   <!-- skill end -->
 
                   <!-- skill -->
-                  <div class="art-hard-skills-item" style="margin-left: 8px;">
-                    <div class="art-skill-heading">
+                  <div class="hard-skills-item" style="margin-left: 8px;">
+                    <div class="skill-heading">
                       <!-- title -->
                       <h6>CSS</h6>
                     </div>
                     <!-- progressbar frame -->
-                    <div class="art-line-progress">
+                    <div class="line-progress">
                       <!-- progressbar -->
                       <div id="lineprog2"></div>
                     </div>
@@ -1599,13 +1857,13 @@ input:focus + .slider {
                   <!-- skill end -->
 
                   <!-- skill -->
-                  <div class="art-hard-skills-item" style="margin-left: 8px;">
-                    <div class="art-skill-heading">
+                  <div class="hard-skills-item" style="margin-left: 8px;">
+                    <div class="skill-heading">
                       <!-- title -->
                       <h6>Js</h6>
                     </div>
                     <!-- progressbar frame -->
-                    <div class="art-line-progress">
+                    <div class="line-progress">
                       <!-- progressbar -->
                       <div id="lineprog3"></div>
                     </div>
@@ -1620,13 +1878,13 @@ input:focus + .slider {
                   <br/>                  
                 
                   <!-- skill -->
-                  <div class="art-hard-skills-item" style="margin-left: 8px;">
-                    <div class="art-skill-heading">
+                  <div class="hard-skills-item" style="margin-left: 8px;">
+                    <div class="skill-heading">
                       <!-- title -->
                       <h6>Python</h6>
                     </div>
                     <!-- progressbar frame -->
-                    <div class="art-line-progress">
+                    <div class="line-progress">
                       <!-- progressbar -->
                       <div id="lineprog4"></div>
                     </div>
@@ -1635,13 +1893,13 @@ input:focus + .slider {
                   <!-- skill end -->
 
                   <!-- skill -->
-                  <div class="art-hard-skills-item" style="margin-left: 8px;">
-                    <div class="art-skill-heading">
+                  <div class="hard-skills-item" style="margin-left: 8px;">
+                    <div class="skill-heading">
                       <!-- title -->
                       <h6>C++</h6>
                     </div>
                     <!-- progressbar frame -->
-                    <div class="art-line-progress">
+                    <div class="line-progress">
                       <!-- progressbar -->
                       <div id="lineprog5"></div>
                     </div>
@@ -1652,7 +1910,7 @@ input:focus + .slider {
                 <!-- language skills end -->
 
                 <!-- divider -->
-                <div class="art-ls-divider"></div>
+                <div class="ls-divider"></div>
 
                 <br/>
 
@@ -1660,7 +1918,7 @@ input:focus + .slider {
                 <h6>Tech Stack</h6>
 
                 <!-- knowledge list -->
-                <ul type="disc" class="art-knowledge-list p-15-0">
+                <ul type="disc" class="knowledge-list p-15-0">
                   <!-- list item -->
                   <li>Bootstrap, Firebase</li>
                   <!-- list item -->
@@ -1672,12 +1930,12 @@ input:focus + .slider {
                 <!-- tech stack end -->
 
                 <!-- divider -->
-                <div class="art-ls-divider"></div>
+                <div class="ls-divider"></div>
 
                 <!-- links frame -->
-                <div class="art-links-frame p-15-15" style="align-content: center; align-items: center;">
+                <div class="links-frame p-15-15" style="align-content: center; align-items: center;">
                   <!-- download resume button -->
-                  <a href="https://drive.google.com/file/d/1r93Qi2i_enwik2L6thOegEopNrtNrhPm/view" title="click to download" class="art-link" download data-no-swup
+                  <a href="https://drive.google.com/file/d/1r93Qi2i_enwik2L6thOegEopNrtNrhPm/view" title="click to download" class="link" download data-no-swup
                     style="font-size: 100%;">Download RESUME <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" zoomAndPan="magnify" viewBox="0 0 75 74.999997" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 5.011719 45 L 70.261719 45 L 70.261719 74 L 5.011719 74 Z M 5.011719 45 " clip-rule="nonzero"/></clipPath></defs><path d="M 37.636719 0.546875 C 35.09375 0.546875 33.023438 2.597656 33.023438 5.117188 L 33.023438 39.144531 L 26.871094 33.050781 C 24.734375 30.992188 21.988281 31.515625 20.394531 33.097656 C 18.796875 34.675781 18.269531 37.386719 20.359375 39.527344 L 34.359375 53.402344 C 35.191406 54.257812 36.335938 54.734375 37.574219 54.742188 C 37.589844 54.742188 37.601562 54.742188 37.613281 54.742188 C 38.851562 54.742188 40.050781 54.261719 40.898438 53.417969 L 54.925781 39.515625 C 57 37.386719 56.46875 34.675781 54.878906 33.09375 C 53.285156 31.515625 50.546875 30.996094 48.390625 33.0625 L 42.25 39.144531 L 42.25 5.117188 C 42.25 2.597656 40.179688 0.546875 37.636719 0.546875 Z M 37.636719 0.546875 " fill-opacity="1" fill-rule="nonzero"/><g clip-path="url(#id1)"><path d="M 9.605469 45.609375 C 7.0625 45.609375 4.992188 47.660156 4.992188 50.183594 L 4.992188 55.242188 C 4.992188 65.421875 13.347656 73.703125 23.621094 73.703125 L 51.652344 73.703125 C 61.925781 73.703125 70.28125 65.421875 70.28125 55.242188 L 70.28125 50.183594 C 70.28125 47.660156 68.210938 45.609375 65.667969 45.609375 C 63.125 45.609375 61.054688 47.660156 61.054688 50.183594 L 61.054688 55.242188 C 61.054688 60.378906 56.835938 64.558594 51.652344 64.558594 L 23.621094 64.558594 C 18.4375 64.558594 14.21875 60.378906 14.21875 55.242188 L 14.21875 50.183594 C 14.21875 47.660156 12.148438 45.609375 9.605469 45.609375 Z M 9.605469 45.609375 " fill-opacity="1" fill-rule="nonzero"/></g></svg>
                   </a>
                 </div>
@@ -1686,7 +1944,7 @@ input:focus + .slider {
               <!-- scroll frame end -->
 
               <!-- sidebar social -->
-              <div class="art-ls-social" >
+              <div class="ls-social" >
                 <!-- social link -->
                 <a  data-no-swup href="https://linkedin.com/in/saifmalik" target="_blank" rel="noopener noreferrer" title="LinkedIn profile">
                   <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" width="20" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0"><path d="M 68.734375 0 C 72.195312 0 75 2.804688 75 6.265625 L 75 68.734375 C 75 72.195312 72.195312 75 68.734375 75 L 6.265625 75 C 2.804688 75 0 72.195312 0 68.734375 L 0 6.265625 C 0 2.804688 2.804688 0 6.265625 0 Z M 50.695312 28.125 C 45.371094 28.125 41.730469 30.476562 40.109375 33.210938 L 39.84375 33.695312 L 39.84375 28.59375 L 29.6875 28.59375 L 29.6875 64.53125 L 40.625 64.53125 L 40.625 47.125 C 40.625 41.289062 42.773438 37.578125 47.9375 37.578125 C 51.5 37.578125 52.992188 40.726562 53.117188 46.34375 L 53.125 47.125 L 53.125 64.53125 L 64.0625 64.53125 L 64.0625 44.683594 C 64.0625 33.964844 61.5 28.125 50.695312 28.125 Z M 21.875 28.125 L 10.9375 28.125 L 10.9375 64.0625 L 21.875 64.0625 Z M 16.40625 9.375 C 12.523438 9.375 9.375 12.523438 9.375 16.40625 C 9.375 20.289062 12.523438 23.4375 16.40625 23.4375 C 20.289062 23.4375 23.4375 20.289062 23.4375 16.40625 C 23.4375 12.523438 20.289062 9.375 16.40625 9.375 Z M 16.40625 9.375 " fill-opacity="1" fill-rule="evenodd"/></svg></a>
@@ -1716,13 +1974,13 @@ input:focus + .slider {
       <!-- app wrapper end -->
 
       <!-- preloader -->
-      <div class="art-preloader">
+      <div class="preloader">
         <!-- preloader content -->
-        <div class="art-preloader-content">
+        <div class="preloader-content">
           <!-- title -->
           <h4>Welcome!</h4>
           <!-- progressbar -->
-          <div id="preloader" class="art-preloader-load"></div>
+          <div id="preloader" class="preloader-load"></div>
         </div>
         <!-- preloader content end -->
       </div>
