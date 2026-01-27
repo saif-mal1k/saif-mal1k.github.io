@@ -3,8 +3,8 @@ $(function() {
 
   "use strict";
 
-  // Set dynamic age (current year - 1)
-  document.getElementById('dynamicAge').textContent = new Date().getFullYear() - 1;
+  // Set dynamic age (current year - birth year)
+  document.getElementById('dynamicAge').textContent = new Date().getFullYear() - 2001;
 
   // Set dynamic copyright year
   document.getElementById('copyrightYear').textContent = new Date().getFullYear();
