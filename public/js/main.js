@@ -3,6 +3,12 @@ $(function() {
 
   "use strict";
 
+  // Set dynamic age (current year - 1)
+  document.getElementById('dynamicAge').textContent = new Date().getFullYear() - 1;
+
+  // Set dynamic copyright year
+  document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+
   const options = {
     containers: ["#swup", "#swupMenu"],
     animateHistoryBrowsing: true,
